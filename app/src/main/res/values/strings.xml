@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">mombo</string>
+    <string name="title">맘보</string>
+    <string name="subtitle">(마음;맘을 보다)</string>
+    <string name="hint_id">ID</string>
+    <string name="hint_pw">password</string>
+    <string name="btn_join">카카오톡으로 회원가입연동</string>
+
+    <string name="explain">선택하세요!~</string>
+    <string name="explain1">산모용</string>
+    <string name="explain2">가족용</string>
+
+    <string name="uptitle">맘보(마음;맘을 보다)</string>
+    <string name="uptitle2">개인정보 입력</string>
+
+    <string name="hint">여기에 입력</string>
+    <string name="ok">확인</string>
+</resources>
