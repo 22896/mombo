@@ -9,16 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Record"></activity>
+        <activity android:name=".selfdiagnosis11" />
+        <activity android:name=".selfdiagnosis10" />
+        <activity android:name=".selfdiagnosis9" />
+        <activity android:name=".selfdiagnosis8" />
+        <activity android:name=".selfdiagnosis6" />
+        <activity android:name=".selfdiagnosis7" />
+        <activity android:name=".selfdiagnosis5" />
+        <activity android:name=".selfdiagnosis4" />
+        <activity android:name=".selfdiagnosis3" />
+        <activity android:name=".selfdiagnosis2" />
+        <activity android:name=".selfdiagnosis" />
+        <activity android:name=".camera" />
         <activity android:name=".MainActivity">
-            <activity android:name=".JoinActivity" />
-            <activity android:name=".ChoiceActivity" />
-            <activity android:name=".FirstActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".ChoiceActivity" />
+        <activity android:name=".FirstActivity" />
     </application>
 
 </manifest>
