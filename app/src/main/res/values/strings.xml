@@ -15,4 +15,6 @@
 
     <string name="hint">여기에 입력</string>
     <string name="ok">확인</string>
+
+    <string name="account">내 정보</string>
 </resources>

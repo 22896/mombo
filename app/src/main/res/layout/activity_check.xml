@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".check">
+
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 선택"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="206dp"
+        app:srcCompat="@android:drawable/progress_indeterminate_horizontal"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(  )월 ( )일의 산모의 상태는______"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="443dp" />
+
+    <TextView
+    android:id="@+id/textView34"
+    android:layout_width="45dp"
+    android:layout_height="29dp"
+    android:background="@color/gray"
+    android:text="  1월"
+    android:textSize="20dp"
+    tools:layout_editor_absoluteX="31dp"
+    tools:layout_editor_absoluteY="97dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton102"
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="45dp"
+        android:layout_height="29dp"
+        android:background="@color/gray"
+        android:text="  1일"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton102"
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton103"
+        android:layout_width="70dp"
+        android:layout_height="66dp"
+        android:scaleType="fitCenter"
+        android:stateListAnimator="@null"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/noun_next_1096193"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

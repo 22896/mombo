@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myaccount">
+
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:stateListAnimator="@null"
+        android:src="@drawable/right_arrow"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <TextView
+        android:id="@+id/exp"
+        android:layout_width="78dp"
+        android:layout_height="50dp"
+        android:text="내 정보"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <Button
+        android:id="@+id/modify"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:text="내 이름 수정"
+
+        android:background="@color/gray"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+    android:id="@+id/modify2"
+    android:layout_width="414dp"
+    android:layout_height="55dp"
+    android:background="@color/gray"
+
+    android:text="병원, 상담센터 변경"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="178dp" />
+
+    <Button
+        android:id="@+id/modify3"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:background="@color/gray"
+
+        android:text="걸음수 변경"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <Button
+        android:id="@+id/modify4"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:background="@color/gray"
+
+        android:text="가족과의 연결 끊기"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="326dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
