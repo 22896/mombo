@@ -7,6 +7,12 @@
     android:background="@drawable/dfs"
     tools:context=".MainActivity">
 
+    <resources>
+
+        <string name="kakao_app_key">35ae24fbfd762f91444dce3a40187764</string>
+
+    </resources>
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"

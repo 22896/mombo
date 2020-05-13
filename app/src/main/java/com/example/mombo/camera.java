@@ -24,4 +24,13 @@ public class camera extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
+
+
+
+
 }
