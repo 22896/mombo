@@ -167,7 +167,7 @@
         android:scaleType="fitCenter"
         android:stateListAnimator="@null"
         app:srcCompat="@android:drawable/stat_notify_chat"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="101dp" />
+        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteY="117dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
