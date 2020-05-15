@@ -14,7 +14,16 @@ public class camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton15);
+        ImageButton Button1 = (ImageButton) findViewById(R.id.cam);
+        Button1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), camera.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton Button2 = (ImageButton) findViewById(R.id.home);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -23,5 +32,24 @@ public class camera extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton Button3 = (ImageButton) findViewById(R.id.list);
+        Button3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), Record.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton Button4 = (ImageButton) findViewById(R.id.message);
+        Button4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), Talk.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }
