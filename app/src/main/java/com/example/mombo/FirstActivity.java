@@ -30,7 +30,7 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton10);
+        ImageButton Button2 = (ImageButton) findViewById(R.id.cam);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override

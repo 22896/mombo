@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/saaaa"
     tools:context=".check">
 
 
@@ -15,77 +14,16 @@
         android:text="날짜 선택"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/noun_user_2699583" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027"
-        app:srcCompat="@drawable/noun_phone_1778832" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/noun_bell_3319638" />
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="51dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="343dp"
-        android:layout_height="370dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315"
-        app:srcCompat="@android:drawable/progress_indeterminate_horizontal" />
+        android:layout_width="250dp"
+        android:layout_height="206dp"
+        app:srcCompat="@android:drawable/progress_indeterminate_horizontal"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="196dp" />
 
     <TextView
         android:id="@+id/textView33"
@@ -93,38 +31,26 @@
         android:layout_height="wrap_content"
         android:text="(  )월 ( )일의 산모의 상태는______"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="443dp" />
 
     <TextView
-        android:id="@+id/textView34"
-        android:layout_width="45dp"
-        android:layout_height="29dp"
-        android:background="@color/gray"
-        android:text="  1월"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+    android:id="@+id/textView34"
+    android:layout_width="45dp"
+    android:layout_height="29dp"
+    android:background="@color/gray"
+    android:text="  1월"
+    android:textSize="20dp"
+    tools:layout_editor_absoluteX="31dp"
+    tools:layout_editor_absoluteY="97dp" />
 
     <ImageButton
         android:id="@+id/imageButton102"
-        android:layout_width="50dp"
-        android:layout_height="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="93dp" />
 
     <TextView
         android:id="@+id/textView34"
@@ -133,94 +59,27 @@
         android:background="@color/gray"
         android:text="  1일"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="99dp" />
 
     <ImageButton
         android:id="@+id/imageButton102"
-        android:layout_width="50dp"
-        android:layout_height="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="93dp" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="51dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
+        android:id="@+id/imageButton103"
+        android:layout_width="70dp"
+        android:layout_height="66dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956"
-        app:srcCompat="@drawable/noun_talking_546894" />
-
-    <ImageButton
-        android:id="@+id/imageButton12"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
+        android:stateListAnimator="@null"
         android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956"
-        app:srcCompat="@drawable/noun_menu_2091765" />
-
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="58dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"
-        app:srcCompat="@drawable/noun_video_camera_3318574" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956"
-        app:srcCompat="@drawable/noun_home_800461" />
+        app:srcCompat="@drawable/noun_next_1096193"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="613dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
