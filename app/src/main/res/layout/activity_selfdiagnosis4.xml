@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
-    tools:context=".selfdiagnosis4">
+    tools:context="com.example.mombo.selfdiagnosis4">
 
     <ImageButton
         android:id="@+id/imageButton10"
