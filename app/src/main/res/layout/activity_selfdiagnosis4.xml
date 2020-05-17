@@ -80,10 +80,18 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="10dp"
         android:text="자가진단"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton46"
@@ -140,10 +148,17 @@
         android:id="@+id/checkBox17"
         android:layout_width="303dp"
         android:layout_height="30dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="36dp"
         android:text="대부분"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="385dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox18" />
 
     <Button
         android:id="@+id/button30"
@@ -157,10 +172,17 @@
         android:id="@+id/checkBox18"
         android:layout_width="303dp"
         android:layout_height="30dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="자주"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
         android:id="@+id/button11"
@@ -174,19 +196,30 @@
         android:id="@+id/checkBox19"
         android:layout_width="303dp"
         android:layout_height="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:text="아니다"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox20"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton48"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox20"
         android:layout_width="303dp"
         android:layout_height="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="가끔"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox19" />
 
     <ImageButton
         android:id="@+id/imageButton52"
