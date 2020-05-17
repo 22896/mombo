@@ -142,15 +142,13 @@
         android:id="@+id/textView13"
         android:layout_width="360dp"
         android:layout_height="72dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:text="10. 나 자신을 해치는 생각이 든다."
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.362" />
+        tools:layout_editor_absoluteY="223dp" />
 
     <CheckBox
         android:id="@+id/checkBox7"

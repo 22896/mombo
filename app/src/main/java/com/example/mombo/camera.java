@@ -15,7 +15,7 @@ public class camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton15);
+        ImageButton Button2 = (ImageButton) findViewById(R.id.home);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -25,7 +25,7 @@ public class camera extends AppCompatActivity {
             }
         });
 
-        ImageButton Button17 = (ImageButton) findViewById(R.id.imageButton17);
+        ImageButton Button17 = (ImageButton) findViewById(R.id.cam);
         Button17.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -35,7 +35,7 @@ public class camera extends AppCompatActivity {
             }
         });
 
-        ImageButton Button16 = (ImageButton) findViewById(R.id.imageButton16);
+        ImageButton Button16 = (ImageButton) findViewById(R.id.list);
         Button16.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -45,7 +45,7 @@ public class camera extends AppCompatActivity {
             }
         });
 
-        ImageButton Button21 = (ImageButton) findViewById(R.id.imageButton21);
+        ImageButton Button21 = (ImageButton) findViewById(R.id.imageButton8);
         Button21.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -55,7 +55,7 @@ public class camera extends AppCompatActivity {
             }
         });
 
-        ImageButton Button18 = (ImageButton) findViewById(R.id.imageButton18);
+        ImageButton Button18 = (ImageButton) findViewById(R.id.message);
         Button18.setOnClickListener(new View.OnClickListener() {
 
             @Override

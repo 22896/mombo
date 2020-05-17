@@ -14,7 +14,7 @@ public class FirstActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first2);
 
-        ImageButton Button1 = (ImageButton) findViewById(R.id.imageButton9);
+        ImageButton Button1 = (ImageButton) findViewById(R.id.home2);
         Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -24,7 +24,7 @@ public class FirstActivity2 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.cam);
+        ImageButton Button2 = (ImageButton) findViewById(R.id.cam2);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -44,7 +44,7 @@ public class FirstActivity2 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button4 = (ImageButton) findViewById(R.id.imageButton12);
+        ImageButton Button4 = (ImageButton) findViewById(R.id.list2);
         Button4.setOnClickListener(new View.OnClickListener() {
 
             @Override

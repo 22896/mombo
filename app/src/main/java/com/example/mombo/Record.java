@@ -14,7 +14,7 @@ public class Record extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton101);
+        ImageButton Button2 = (ImageButton) findViewById(R.id.home);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
