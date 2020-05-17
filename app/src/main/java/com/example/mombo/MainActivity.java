@@ -105,7 +105,8 @@ private class SessionCallback implements ISessionCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button Button1 = (Button) findViewById(R.id.btn3);
+
+        Button Button1 = (Button) findViewById(R.id.button);
         Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -116,15 +117,6 @@ private class SessionCallback implements ISessionCallback {
         });
 
 
-        Button Button2 = (Button) findViewById(R.id.button);
-        Button2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), ChoiceActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }

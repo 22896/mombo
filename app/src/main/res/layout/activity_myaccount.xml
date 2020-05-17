@@ -13,58 +13,75 @@
         android:layout_height="46dp"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        android:stateListAnimator="@null"
         android:src="@drawable/right_arrow"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="15dp" />
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
     <TextView
         android:id="@+id/exp"
         android:layout_width="78dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
         android:text="내 정보"
         android:textColor="@color/black"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="20dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
         android:id="@+id/modify"
         android:layout_width="414dp"
         android:layout_height="55dp"
-        android:text="내 이름 수정"
 
         android:background="@color/gray"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="100dp" />
+        android:text="내 이름 수정"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
 
     <Button
-    android:id="@+id/modify2"
-    android:layout_width="414dp"
-    android:layout_height="55dp"
-    android:background="@color/gray"
+        android:id="@+id/modify2"
+        android:layout_width="414dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="20dp"
 
-    android:text="병원, 상담센터 변경"
-    tools:layout_editor_absoluteX="-1dp"
-    tools:layout_editor_absoluteY="178dp" />
+        android:background="@color/gray"
+        android:text="병원, 상담센터 변경"
+        app:layout_constraintBottom_toTopOf="@+id/modify3"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/modify3"
         android:layout_width="414dp"
         android:layout_height="55dp"
-        android:background="@color/gray"
+        android:layout_marginBottom="16dp"
 
+        android:background="@color/gray"
         android:text="걸음수 변경"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="252dp" />
+        app:layout_constraintBottom_toTopOf="@+id/modify4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/modify4"
         android:layout_width="414dp"
         android:layout_height="55dp"
-        android:background="@color/gray"
+        android:layout_marginBottom="356dp"
 
+        android:background="@color/gray"
         android:text="가족과의 연결 끊기"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="326dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

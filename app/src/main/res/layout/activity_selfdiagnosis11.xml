@@ -8,12 +8,12 @@
     tools:context=".selfdiagnosis11">
 
     <ImageButton
-        android:id="@+id/imageButton88"
+        android:id="@+id/imageButton9"
         android:layout_width="52dp"
         android:layout_height="48dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="36dp"
         android:background="@android:color/transparent"
         android:padding="0dp"
         android:scaleType="fitCenter"
@@ -24,41 +24,7 @@
         app:srcCompat="@drawable/noun_home_800461" />
 
     <ImageButton
-        android:id="@+id/imageButton89"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:layout_marginBottom="28dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:srcCompat="@drawable/noun_menu_2091765" />
-
-    <ImageButton
-        android:id="@+id/imageButton91"
-        android:layout_width="58dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginRight="224dp"
-        android:layout_marginBottom="20dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
-        app:srcCompat="@drawable/noun_video_camera_3318574" />
-
-    <ImageButton
-        android:id="@+id/imageButton92"
+        android:id="@+id/imageButton11"
         android:layout_width="51dp"
         android:layout_height="45dp"
         android:layout_marginStart="224dp"
@@ -72,24 +38,53 @@
         app:layout_constraintEnd_toStartOf="@+id/imageButton12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
+        app:layout_constraintVertical_bias="0.946"
         app:srcCompat="@drawable/noun_talking_546894" />
 
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이전"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="451dp" />
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="58dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginRight="220dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:srcCompat="@drawable/noun_video_camera_3318574" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton11"
+        app:srcCompat="@drawable/noun_menu_2091765" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/button30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다음"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="451dp" />
+        android:text="확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="450dp" />
 
     <CheckBox
         android:id="@+id/checkBox41"
@@ -180,7 +175,7 @@
         tools:layout_editor_absoluteY="160dp" />
 
     <ImageButton
-        android:id="@+id/imageButton94"
+        android:id="@+id/imageButton8"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
