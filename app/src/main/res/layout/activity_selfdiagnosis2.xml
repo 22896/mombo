@@ -7,204 +7,199 @@
     android:background="@drawable/saaaa"
     tools:context="com.example.mombo.selfdiagnosis2">
 
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="36dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/noun_home_800461" />
+    <!--틀-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="75dp">
+        <!--상단바-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="110dp"
+            tools:layout_editor_absoluteY="1dp">
 
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="51dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginLeft="228dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947"
-        app:srcCompat="@drawable/noun_talking_546894" />
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/noun_bell_3319638" />
 
-    <ImageButton
-        android:id="@+id/imageButton12"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="36dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:srcCompat="@drawable/noun_menu_2091765" />
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="246dp"
+                android:layout_marginRight="246dp"
+                android:layout_marginBottom="672dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/noun_phone_1778832" />
 
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="58dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginEnd="208dp"
-        android:layout_marginRight="208dp"
-        android:layout_marginBottom="32dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
-        app:srcCompat="@drawable/noun_video_camera_3318574" />
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/noun_user_2699583" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="자가진단"
-        android:textSize="36sp"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="164dp" />
+        <!--    진단부분-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageButton32"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="304dp"
-        android:layout_marginRight="304dp"
-        android:layout_marginBottom="672dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton6"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/noun_phone_1778832" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:text="자가진단"
+                android:textSize="30sp" />
 
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/noun_user_2699583" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="30dp"
+                android:text="2. 즐거운 기대감에 어떤 일을 손꼽아 기다렸다."
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="360dp"
-        android:layout_height="72dp"
-        android:text="2. 즐거운 기대감에 어떤 일을 손꼽아 기다렸다."
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+            <!--대답 체크 부분-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/checkBox9"
-        android:layout_width="303dp"
-        android:layout_height="30dp"
-        android:text="대부분"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="385dp" />
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="자주"
+                    android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="다음"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="451dp" />
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="대부분"
+                    android:textSize="18sp" />
 
-    <CheckBox
-        android:id="@+id/checkBox10"
-        android:layout_width="303dp"
-        android:layout_height="30dp"
-        android:text="자주"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="355dp" />
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="가끔"
+                    android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이전"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="451dp" />
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="아니다"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/checkBox11"
-        android:layout_width="303dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:text="아니다"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox12"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!--페이지 이전 다음-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/checkBox12"
-        android:layout_width="303dp"
-        android:layout_height="30dp"
-        android:text="가끔"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="325dp" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="이전" />
 
-    <ImageButton
-        android:id="@+id/imageButton38"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
-        app:srcCompat="@drawable/noun_bell_3319638" />
+                <Button
+                    android:id="@+id/button30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:text="다음" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--하단 바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="37dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="3dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/noun_home_800461" />
+
+            <ImageButton
+                android:id="@+id/cam"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/noun_video_camera_3318574" />
+
+            <ImageButton
+                android:id="@+id/message"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/noun_talking_546894" />
+
+            <ImageButton
+                android:id="@+id/list"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/noun_menu_2091765" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
