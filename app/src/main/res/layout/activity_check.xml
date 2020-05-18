@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/saaaa"
     tools:context="com.example.mombo.check">
 
 
@@ -61,14 +62,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="날짜 선택"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 tools:layout_editor_absoluteX="28dp"
@@ -122,7 +124,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="288dp"
                 android:layout_height="273dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="20dp"
                 app:srcCompat="@android:drawable/progress_indeterminate_horizontal"
                 tools:layout_editor_absoluteX="62dp"
                 tools:layout_editor_absoluteY="196dp" />

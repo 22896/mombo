@@ -34,7 +34,4 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    // 카톡 연동
-    compile group: project.KAKAO_SDK_GROUP, name: 'usermgmt',
-
-            version: project.KAKAO_SDK_VERSION}
+    }
