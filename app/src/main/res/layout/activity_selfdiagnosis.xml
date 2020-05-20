@@ -114,26 +114,27 @@
                     android:text="아니다"
                     android:textSize="18sp" />
             </LinearLayout>
-<!--페이지 이전 다음-->
+
+            <!--페이지 이전 다음-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="70dp">
+                android:layout_marginTop="70dp"
+                android:orientation="horizontal">
+
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/prev"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:text="이전" />
+
                 <Button
-                    android:id="@+id/button30"
+                    android:id="@+id/next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="90dp"
                     android:text="다음" />
-
-
             </LinearLayout>
         </LinearLayout>
 

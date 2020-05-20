@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Button;
 
 public class selfdiagnosis11 extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class selfdiagnosis11 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button1 = (ImageButton) findViewById(R.id.imageButton9);
+        ImageButton Button1 = (ImageButton) findViewById(R.id.home);
         Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -34,7 +35,7 @@ public class selfdiagnosis11 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton10);
+        ImageButton Button2 = (ImageButton) findViewById(R.id.cam);
         Button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -44,7 +45,7 @@ public class selfdiagnosis11 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button5 = (ImageButton) findViewById(R.id.imageButton11);
+        ImageButton Button5 = (ImageButton) findViewById(R.id.message);
         Button5.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -55,7 +56,7 @@ public class selfdiagnosis11 extends AppCompatActivity {
         });
 
 
-        ImageButton Button4 = (ImageButton) findViewById(R.id.imageButton12);
+        ImageButton Button4 = (ImageButton) findViewById(R.id.list);
         Button4.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,8 +66,9 @@ public class selfdiagnosis11 extends AppCompatActivity {
             }
         });
 
-        ImageButton Button30 = (ImageButton) findViewById(R.id.imageButton30);
-        Button30.setOnClickListener(new View.OnClickListener() {
+
+        Button Button31 = (Button) findViewById(R.id.ok);
+        Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View w) {
