@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "143510078579",
+    "firebase_url": "https://mombo-5d24d.firebaseio.com",
+    "project_id": "mombo-5d24d",
+    "storage_bucket": "mombo-5d24d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143510078579:android:06fc4e99a0542894c8d606",
+        "android_client_info": {
+          "package_name": "com.example.mombo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143510078579-rl26hqsdfqgp089bh11br7u9ls4cm0it.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCDoREOcbn2w7iRzdUR-dq_fUKERaGreU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143510078579-rl26hqsdfqgp089bh11br7u9ls4cm0it.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
