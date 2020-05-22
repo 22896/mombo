@@ -7,7 +7,8 @@
     android:background="@drawable/saaaa"
     tools:context="com.example.mombo.talk">
 
-    <!--틀-->
+<!--    프레임 레이아웃은 마지막에 추가한 레이아웃이 가장 앞에 있다 -->
+    <!--틀, 근데 이 부분은 메세지보낼떄 하단부분을 계속 보이게 하려면 틀을 프레임레이아웃으로..-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
