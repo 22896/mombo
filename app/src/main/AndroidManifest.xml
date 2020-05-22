@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mombo">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".check"></activity>
+        <activity android:name=".Join_fam"></activity>
+        <activity android:name=".check" />
         <activity android:name=".myaccount" />
         <activity android:name=".Record" />
         <activity android:name=".selfdiagnosis11" />
@@ -32,11 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JoinActivity" />
+        <activity android:name=".Join_mom" />
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".FirstActivity" />
     </application>
-
-
 
 </manifest>

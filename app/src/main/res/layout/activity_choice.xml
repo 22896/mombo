@@ -5,88 +5,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dfs"
-    tools:context="com.example.mombo.MainActivity">
+    tools:context="com.example.mombo.ChoiceActivity">
 
-    <TextView
-        android:id="@+id/explaintext2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="75dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/explain2"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.689"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/explaintext5"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/explaintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="산모용, 가족용 중"
+            android:textSize="36sp"/>
+
+        <TextView
+            android:id="@+id/explaintext4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택하세요."
+            android:textSize="36sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:text="@string/explain1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        android:layout_margin="30dp"
+        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="113dp"
-        android:layout_height="117dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/mom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="124dp"
-        android:layout_height="115dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/family"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="113dp"
+                android:layout_height="117dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mom" />
 
-    <TextView
-        android:id="@+id/explaintext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="산모용, 가족용 중"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/explaintext4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/explaintext5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/explain1"
+                android:textSize="30sp" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/explaintext4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="선택하세요."
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="124dp"
+                android:layout_height="115dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/family"/>
+            <TextView
+                android:id="@+id/explaintext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explain2"
+                android:layout_marginLeft="20dp"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </LinearLayout>
 
+
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

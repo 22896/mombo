@@ -8,7 +8,7 @@ package com.example.mombo;
 
         import androidx.appcompat.app.AppCompatActivity;
 
-public class JoinActivity extends AppCompatActivity {
+public class Join_mom extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
