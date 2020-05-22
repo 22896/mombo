@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "143510078579",
-    "firebase_url": "https://mombo-5d24d.firebaseio.com",
-    "project_id": "mombo-5d24d",
-    "storage_bucket": "mombo-5d24d.appspot.com"
+    "project_number": "859119865149",
+    "firebase_url": "https://mombo-6653d.firebaseio.com",
+    "project_id": "mombo-6653d",
+    "storage_bucket": "mombo-6653d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:143510078579:android:06fc4e99a0542894c8d606",
+        "mobilesdk_app_id": "1:859119865149:android:853f526b5387c11f5fc954",
         "android_client_info": {
           "package_name": "com.example.mombo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "143510078579-rl26hqsdfqgp089bh11br7u9ls4cm0it.apps.googleusercontent.com",
+          "client_id": "859119865149-7ehubcv99pbnqdn1uuihti0a6ehmdsfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mombo",
+            "certificate_hash": "a5741585f72bc3e6797f7f9de24ac9de6fc00018"
+          }
+        },
+        {
+          "client_id": "859119865149-ogve02ufif9pqqt882oocgm46i33vr29.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBCDoREOcbn2w7iRzdUR-dq_fUKERaGreU"
+          "current_key": "AIzaSyBGAzl1j3mRXlBAW-7pFnyP4CpMoggl-Qg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "143510078579-rl26hqsdfqgp089bh11br7u9ls4cm0it.apps.googleusercontent.com",
+              "client_id": "859119865149-ogve02ufif9pqqt882oocgm46i33vr29.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
