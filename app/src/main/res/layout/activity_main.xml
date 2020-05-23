@@ -35,6 +35,15 @@
                 android:layout_height="258dp"
                 android:layout_marginTop="140dp"
                 app:srcCompat="@drawable/photo2" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="로그인" />
         </LinearLayout>
 
         <!--아이디비번입력부분-->
@@ -54,13 +63,13 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/editText4"
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:hint="@string/hint_id" />
 
                     <EditText
-                        android:id="@+id/editText3"
+                        android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginBottom="92dp"
@@ -85,7 +94,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btn_join"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
