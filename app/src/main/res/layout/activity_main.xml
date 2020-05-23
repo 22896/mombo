@@ -65,13 +65,13 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/email"
+                        android:id="@+id/input_email"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:hint="@string/hint_id" />
 
                     <EditText
-                        android:id="@+id/password"
+                        android:id="@+id/input_pswd"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginBottom="92dp"
@@ -79,7 +79,7 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/ok"
+                    android:id="@+id/login_btn"
                     android:layout_width="match_parent"
                     android:layout_height="128dp"
                     android:background="@android:color/transparent"
