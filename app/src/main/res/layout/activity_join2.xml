@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginRight="30dp"
     tools:context="com.example.mombo.Join_fam">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
+ <TextView
                 android:id="@+id/uptitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,70 +34,60 @@
                 app:layout_constraintHorizontal_bias="0.122"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <!--닉네임입력-->
-            <TextView
-                android:id="@+id/ex_nickname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:text="닉네임"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="이메일 입력"
+        android:inputType="text"
+        android:textSize="15sp" />
+    <EditText
+        android:id="@+id/input_pswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="비밀번호 입력"
+        android:inputType="text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="닉네임"
+        android:inputType="text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="전화번호"
+        android:inputType="phone"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
 
-            <EditText
-                android:id="@+id/nickname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint"
-                android:inputType="text"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <!--전화번호 입력-->
-            <TextView
-                android:id="@+id/ex_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="전화번호"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <EditText
-                android:id="@+id/number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint"
-                android:inputType="phone"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
-
-
-            <!--병원 입력 ,  지도 나중에 연결하기-->
-            <TextView
-                android:id="@+id/ex_hoapital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="병원 및 상담센터 연결"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
-
-            <EditText
-                android:id="@+id/hospital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/hint"
-                android:inputType="phone"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
-
+    <EditText
+        android:id="@+id/hnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="병원 번호"
+        android:inputType="phone"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
             <!--초대코드-->
             <TextView
                 android:id="@+id/ex_invite"
@@ -133,20 +108,74 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent" />
 
-            <Button
-                android:id="@+id/ok"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="120dp"
-                android:background="@color/black"
-                android:text="@string/ok"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="italic" />
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="40dp"
+        android:background="@color/black"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="italic" />
 
         </LinearLayout>
 
+  <!--닉네임입력-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/ex_nickname"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="35dp"-->
+    <!--                android:text="닉네임"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--전화번호 입력-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/ex_number"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:text="전화번호"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
+
+    <!--병원 입력-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/ex_hoapital"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:text="병원 및 상담센터 연결"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="parent" />-->
+
+
+
+
+    <!--초대코드-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/ex_invite"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                android:text="초대코드 (가족용을 공유할 사람에게 전송하세요)"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="parent" />-->
+
+    <!--            <EditText-->
+    <!--                android:id="@+id/invite"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:ems="5"-->
+    <!--                android:inputType="textPersonName"-->
+    <!--                android:text="초대코드"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="parent" />-->
