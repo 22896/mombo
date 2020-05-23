@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:padding="12dp"
-                    app:srcCompat="@drawable/noun_next_1096193" />
+                    android:src="@drawable/noun_next_1096193" />
 
                 <TextView
                     android:id="@+id/textView3"

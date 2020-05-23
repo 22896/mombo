@@ -32,7 +32,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_bell_3319638" />
+                android:src="@drawable/noun_bell_3319638" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -46,7 +46,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_phone_1778832" />
+                android:src="@drawable/noun_phone_1778832" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
@@ -55,7 +55,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_user_2699583" />
+                android:src="@drawable/noun_user_2699583" />
         </LinearLayout>
 
         <!-- 가운데-->
@@ -96,7 +96,7 @@
                     android:id="@+id/imageButton10"
                     android:layout_width="53dp"
                     android:layout_height="39dp"
-                    app:srcCompat="@android:drawable/arrow_down_float"
+                    android:src="@android:drawable/arrow_down_float"
                     tools:layout_editor_absoluteX="76dp"
                     tools:layout_editor_absoluteY="93dp" />
 
@@ -115,7 +115,7 @@
                     android:id="@+id/imageButton11"
                     android:layout_width="53dp"
                     android:layout_height="39dp"
-                    app:srcCompat="@android:drawable/arrow_down_float"
+                    android:src="@android:drawable/arrow_down_float"
                     tools:layout_editor_absoluteX="176dp"
                     tools:layout_editor_absoluteY="93dp" />
             </LinearLayout>
@@ -125,7 +125,7 @@
                 android:layout_width="288dp"
                 android:layout_height="273dp"
                 android:layout_marginLeft="20dp"
-                app:srcCompat="@android:drawable/progress_indeterminate_horizontal"
+                android:src="@android:drawable/progress_indeterminate_horizontal"
                 tools:layout_editor_absoluteX="62dp"
                 tools:layout_editor_absoluteY="196dp" />
 
@@ -162,7 +162,7 @@
                 android:padding="3dp"
                 android:paddingTop="10dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_home_800461" />
+                android:src="@drawable/noun_home_800461" />
 
             <ImageButton
                 android:id="@+id/cam"
@@ -174,7 +174,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_video_camera_3318574" />
+                android:src="@drawable/noun_video_camera_3318574" />
 
             <ImageButton
                 android:id="@+id/message"
@@ -186,7 +186,7 @@
                 android:background="@android:color/transparent"
                 android:padding="4dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_talking_546894" />
+                android:src="@drawable/noun_talking_546894" />
 
             <ImageButton
                 android:id="@+id/list"
@@ -197,7 +197,7 @@
                 android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_menu_2091765" />
+                android:src="@drawable/noun_menu_2091765" />
         </LinearLayout>
     </LinearLayout>
 

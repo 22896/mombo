@@ -32,7 +32,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_bell_3319638" />
+                android:src="@drawable/noun_bell_3319638" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -46,7 +46,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_phone_1778832" />
+                android:src="@drawable/noun_phone_1778832" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
@@ -55,12 +55,12 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/noun_user_2699583" />
+                android:src="@drawable/noun_user_2699583" />
         </LinearLayout>
 
         <!--가운데 이미지 부분-->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
@@ -68,7 +68,7 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="58dp"
                 android:text="Good morning"
                 android:textColor="@android:color/black"
@@ -76,7 +76,7 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="58dp"
                 android:text="Nickname"
                 android:textColor="@android:color/holo_orange_dark"
@@ -84,18 +84,18 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.344"
-                app:srcCompat="@drawable/photo2" />
+                android:src="@drawable/photo2" />
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="wrap_content"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:paddingLeft="30dp"
                 android:text="오늘의"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -123,34 +123,31 @@
                     android:gravity="right"
                     android:padding="0dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/noun_next_1096193" />
+                    android:src="@drawable/noun_next_1096193" />
             </LinearLayout>
+
             <!--걸음수 부분-->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/text"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="290dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:paddingLeft="70dp"
-                    android:layout_marginTop="10dp"
                     android:text="오늘의 걸음"
                     android:textSize="25sp" />
-                <Button
-                    android:id="@+id/resetBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="리셋" />
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
-
                     <TextView
                         android:id="@+id/cntView"
                         android:layout_width="5dp"
@@ -161,14 +158,18 @@
                         android:textSize="36sp" />
                     <TextView
                         android:id="@+id/cntView2"
-                        android:layout_width="1sp"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="/ 2500"
                         android:textSize="36sp" />
-
-
                 </LinearLayout>
+                <Button
+                    android:id="@+id/resetBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="리셋" />
             </LinearLayout>
 
         </LinearLayout>
@@ -193,7 +194,7 @@
                 android:padding="3dp"
                 android:paddingTop="10dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_home_800461" />
+                android:src="@drawable/noun_home_800461" />
 
 
             <ImageButton
@@ -206,7 +207,7 @@
                 android:background="@android:color/transparent"
                 android:padding="0dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_video_camera_3318574" />
+                android:src="@drawable/noun_video_camera_3318574" />
 
             <ImageButton
                 android:id="@+id/message"
@@ -218,7 +219,7 @@
                 android:background="@android:color/transparent"
                 android:padding="4dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_talking_546894" />
+                android:src="@drawable/noun_talking_546894" />
 
             <ImageButton
                 android:id="@+id/list"
@@ -229,7 +230,7 @@
                 android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/noun_menu_2091765" />
+                android:src="@drawable/noun_menu_2091765" />
         </LinearLayout>
     </LinearLayout>
 
