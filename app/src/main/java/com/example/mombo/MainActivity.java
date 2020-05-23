@@ -34,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button Button2 = (Button) findViewById(R.id.btn_join);
+        Button2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), registration.class);
+                startActivity(intent);
+            }
+        });
+
         mAuth = FirebaseAuth.getInstance();
 
         initializeUI();
@@ -88,5 +98,7 @@ public class MainActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.login);
         progressBar = findViewById(R.id.progressBar);
     }
+
+
 }
 
