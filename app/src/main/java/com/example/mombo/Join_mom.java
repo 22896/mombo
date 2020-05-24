@@ -117,7 +117,7 @@ public class Join_mom extends AppCompatActivity {
                                 }
                             });
                 } else {
-                    Toast.makeText(Join_mom.this, "회원가입 실패!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Join_mom.this, "회원가입 실패,,,ㅠㅠ", Toast.LENGTH_SHORT).show();
                 }
 
 

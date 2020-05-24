@@ -38,9 +38,6 @@
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".FirstActivity" />
 
-        <activity android:name=".registration" />
-
-
 
     </application>
 
