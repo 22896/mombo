@@ -35,6 +35,17 @@ public class myaccount extends AppCompatActivity {
             }
         });
 
+        Button Button3 = (Button) findViewById(R.id.sendButton);
+        Button3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), PasswordResetActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }

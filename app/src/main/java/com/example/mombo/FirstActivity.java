@@ -50,6 +50,17 @@ public class FirstActivity extends Activity implements SensorEventListener  {
         setContentView(R.layout.activity_first);
 
 
+
+        ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton8);
+        Button2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), myaccount.class);
+                startActivity(intent);
+            }
+        });
+
     sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
     accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
