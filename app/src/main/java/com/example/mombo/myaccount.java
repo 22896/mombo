@@ -8,12 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class myaccount extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myaccount);
+
+
+        findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
+
+
 
         Button Button1 = (Button) findViewById(R.id.modify);
         Button1.setOnClickListener(new View.OnClickListener() {
@@ -47,5 +54,22 @@ public class myaccount extends AppCompatActivity {
 
 
 
+    }
+
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.logoutButton:
+                    FirebaseAuth.getInstance().signOut();
+                    startFirstActivity();
+                    break;
+            }
+        }
+    };
+
+    private void startFirstActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
