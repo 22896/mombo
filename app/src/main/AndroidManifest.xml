@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Join_fam"></activity>
+        <activity android:name=".Join_fam" />
         <activity android:name=".check" />
         <activity android:name=".myaccount" />
         <activity android:name=".Record" />
@@ -32,9 +32,9 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
-        <activity android:name=".Join_mom"/> >
-
+            </intent-filter>
+        </activity>
+        <activity android:name=".Join_mom" />
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".FirstActivity" />
 

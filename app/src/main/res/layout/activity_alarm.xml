@@ -18,11 +18,12 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <!-- 이미지 뷰 클릭가능하게 안되면 버튼으로 바꾸기-->
-            <ImageView
+            <ImageButton
                 android:id="@+id/back"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
                 android:clickable="true"
                 android:padding="12dp"
                 android:src="@drawable/noun_next_1096193" />

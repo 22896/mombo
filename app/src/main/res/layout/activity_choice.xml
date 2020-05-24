@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="산모용, 가족용 중"
-            android:textSize="36sp"/>
+            android:textSize="36sp" />
 
         <TextView
             android:id="@+id/explaintext4"

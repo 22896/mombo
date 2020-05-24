@@ -1,87 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context="com.example.mombo.myaccount">
 
 
-    <ImageButton
-        android:id="@+id/back"
-        android:layout_width="56dp"
-        android:layout_height="46dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/right_arrow"
-        android:stateListAnimator="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
 
-    <TextView
-        android:id="@+id/exp"
-        android:layout_width="78dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
-        android:text="내 정보"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
 
-    <Button
-        android:id="@+id/modify"
-        android:layout_width="414dp"
-        android:layout_height="55dp"
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="56dp"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/right_arrow"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.954"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
 
-        android:background="@color/gray"
-        android:text="내 이름 수정"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        <TextView
+            android:id="@+id/exp"
+            android:layout_width="78dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="내 정보"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
 
-    <Button
-        android:id="@+id/modify2"
-        android:layout_width="414dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="20dp"
+        <Button
+            android:id="@+id/modify"
+            android:layout_width="414dp"
+            android:layout_height="55dp"
+            android:background="@color/gray"
+            android:text="내 이름 수정"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.149" />
 
-        android:background="@color/gray"
-        android:text="병원, 상담센터 변경"
-        app:layout_constraintBottom_toTopOf="@+id/modify3"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/modify2"
+            android:layout_width="414dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="4dp"
 
-    <Button
-        android:id="@+id/modify3"
-        android:layout_width="414dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray"
+            android:text="병원, 상담센터 변경"
+            app:layout_constraintBottom_toTopOf="@+id/modify3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify"
+            app:layout_constraintVertical_bias="1.0" />
 
-        android:background="@color/gray"
-        android:text="걸음수 변경"
-        app:layout_constraintBottom_toTopOf="@+id/modify4"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/modify3"
+            android:layout_width="414dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/gray"
+            android:text="걸음수 변경"
+            app:layout_constraintBottom_toTopOf="@+id/modify4"
+            app:layout_constraintTop_toBottomOf="@+id/modify2"
+            tools:layout_editor_absoluteX="-2dp" />
 
-    <Button
-        android:id="@+id/modify4"
-        android:layout_width="414dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="356dp"
+        <Button
+            android:id="@+id/modify4"
+            android:layout_width="414dp"
+            android:layout_height="55dp"
 
-        android:background="@color/gray"
-        android:text="가족과의 연결 끊기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/gray"
+            android:text="가족과의 연결 끊기"
+            app:layout_constraintBottom_toTopOf="@+id/modify5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modify3" />
+
+        <Button
+            android:id="@+id/modify5"
+            android:layout_width="414dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="156dp"
+            android:background="@color/gray"
+            android:text="비밀번호 재설정"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+</LinearLayout>
