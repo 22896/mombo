@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/saaaa"
     tools:context="com.example.mombo.selfdiagnosis9">
 
-    <!--틀-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="75dp">
+
         <!--상단바-->
         <LinearLayout
+            android:id="@+id/rv_1"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_margin="10dp"
@@ -25,7 +21,7 @@
             tools:layout_editor_absoluteY="1dp">
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/alarm"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
@@ -34,7 +30,7 @@
                 android:src="@drawable/noun_bell_3319638" />
 
             <ImageButton
-                android:id="@+id/imageButton7"
+                android:id="@+id/call"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
@@ -48,7 +44,7 @@
                 android:src="@drawable/noun_phone_1778832" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/myaccount"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@android:color/transparent"
@@ -59,6 +55,7 @@
 
         <!--    진단부분-->
         <LinearLayout
+            android:layout_below="@+id/rv_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -201,5 +198,4 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/noun_menu_2091765" />
         </LinearLayout>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
