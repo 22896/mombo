@@ -9,12 +9,10 @@
     tools:context="com.example.mombo.myaccount">
 
 
-
-
         <ImageButton
             android:id="@+id/back"
             android:layout_width="56dp"
-            android:layout_height="46dp"
+            android:layout_height="47dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/right_arrow"
