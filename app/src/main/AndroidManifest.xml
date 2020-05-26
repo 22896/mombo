@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Join_fam" />
         <activity android:name=".check" />
+        <activity android:name=".call" />
         <activity android:name=".myaccount" />
         <activity android:name=".Record" />
         <activity android:name=".selfdiagnosis11" />

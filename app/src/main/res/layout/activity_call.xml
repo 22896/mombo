@@ -58,7 +58,7 @@
 
         <!--            상담센터 전화번호 입력 안해도 보여지게-->
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/edtNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

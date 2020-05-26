@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Button signup_btn = (Button) findViewById(R.id.btn_join);
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
