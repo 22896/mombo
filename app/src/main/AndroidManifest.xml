@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Join_fam" />
+        <activity android:name=".Fam_Join" />
         <activity android:name=".check" />
         <activity android:name=".call" />
         <activity android:name=".myaccount" />
@@ -28,16 +28,16 @@
         <activity android:name=".selfdiagnosis2" />
         <activity android:name=".selfdiagnosis" />
         <activity android:name=".camera" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Join_mom" />
+        <activity android:name=".Mom_join" />
         <activity android:name=".ChoiceActivity" />
-        <activity android:name=".FirstActivity" />
+        <activity android:name=".Mom_Main" />
         <activity android:name=".PasswordResetActivity" />
 
 

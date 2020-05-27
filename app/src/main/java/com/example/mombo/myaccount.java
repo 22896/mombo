@@ -27,7 +27,7 @@ public class myaccount extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Join_mom.class);
+                Intent intent = new Intent(getApplicationContext(), Mom_join.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class myaccount extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), FirstActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Mom_Main.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class myaccount extends AppCompatActivity {
     };
 
     private void startFirstActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }

@@ -7,19 +7,19 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FirstActivity2 extends AppCompatActivity {
+public class Fam_Main extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first2);
+        setContentView(R.layout.activity_fam_main);
 
         ImageButton Button1 = (ImageButton) findViewById(R.id.home2);
         Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), FirstActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), Fam_Main.class);
                 startActivity(intent);
             }
         });

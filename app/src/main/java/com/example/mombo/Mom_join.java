@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,14 +17,13 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Join_mom extends AppCompatActivity {
+public class Mom_join extends AppCompatActivity {
 
     EditText input_email;
     EditText input_pswd;
@@ -44,7 +42,7 @@ public class Join_mom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join);
+        setContentView(R.layout.activity_mom_join);
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
@@ -75,7 +73,7 @@ public class Join_mom extends AppCompatActivity {
                         && (nickname != null && !nickname.isEmpty()) && (phone != null && !phone.isEmpty())
                         && (famphone != null && !famphone.isEmpty()) && (hnumber != null && !hnumber.isEmpty()) && (steps != null && !steps.isEmpty())) {
                     mAuth.createUserWithEmailAndPassword(email, pswd)
-                            .addOnCompleteListener(Join_mom.this, new OnCompleteListener<AuthResult>() {
+                            .addOnCompleteListener(Mom_join.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
@@ -104,20 +102,20 @@ public class Join_mom extends AppCompatActivity {
                                                     }
                                                 });
 
-                                        Toast.makeText(Join_mom.this, "등록 성공!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Mom_join.this, "등록 성공!", Toast.LENGTH_SHORT).show();
 
-                                        Intent intent = new Intent(Join_mom.this, MainActivity.class);
+                                        Intent intent = new Intent(Mom_join.this, LoginActivity.class);
                                         startActivity(intent);
 
                                     } else {
-                                        Toast.makeText(Join_mom.this, "비밀번호는 문자와 숫자 혼합으로 6자리 이상 지정해주세요.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Mom_join.this, "비밀번호는 문자와 숫자 혼합으로 6자리 이상 지정해주세요.", Toast.LENGTH_SHORT).show();
                                     }
 
                                     // ...
                                 }
                             });
                 } else {
-                    Toast.makeText(Join_mom.this, "회원가입 실패,,,ㅠㅠ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Mom_join.this, "회원가입 실패,,,ㅠㅠ", Toast.LENGTH_SHORT).show();
                 }
 
 

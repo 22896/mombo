@@ -23,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Join_fam extends AppCompatActivity {
+public class Fam_Join extends AppCompatActivity {
 
     EditText input_email;
     EditText input_pswd;
@@ -40,7 +40,7 @@ public class Join_fam extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join);
+        setContentView(R.layout.activity_mom_join);
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
@@ -66,7 +66,7 @@ public class Join_fam extends AppCompatActivity {
                 if ((email != null && !email.isEmpty()) && (pswd != null && !pswd.isEmpty())
                         && (nickname != null && !nickname.isEmpty()) && (phone != null && !phone.isEmpty()) &&  (hnumber != null && !hnumber.isEmpty())) {
                     mAuth.createUserWithEmailAndPassword(email, pswd)
-                            .addOnCompleteListener(Join_fam.this, new OnCompleteListener<AuthResult>() {
+                            .addOnCompleteListener(Fam_Join.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
@@ -93,20 +93,20 @@ public class Join_fam extends AppCompatActivity {
                                                     }
                                                 });
 
-                                        Toast.makeText(Join_fam.this, "등록 성공!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Fam_Join.this, "등록 성공!", Toast.LENGTH_SHORT).show();
 
-                                        Intent intent = new Intent(Join_fam.this, MainActivity.class);
+                                        Intent intent = new Intent(Fam_Join.this, LoginActivity.class);
                                         startActivity(intent);
 
                                     } else {
-                                        Toast.makeText(Join_fam.this, "비밀번호는 문자와 숫자 혼합으로 6자리 이상 지정해주세요.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Fam_Join.this, "비밀번호는 문자와 숫자 혼합으로 6자리 이상 지정해주세요.", Toast.LENGTH_SHORT).show();
                                     }
 
                                     // ...
                                 }
                             });
                 } else {
-                    Toast.makeText(Join_fam.this, "회원가입 실패!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Fam_Join.this, "회원가입 실패!", Toast.LENGTH_SHORT).show();
                 }
 
 

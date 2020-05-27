@@ -19,7 +19,7 @@ public class Record extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), FirstActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Mom_Main.class);
                 startActivity(intent);
             }
         });
