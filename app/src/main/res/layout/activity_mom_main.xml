@@ -71,7 +71,7 @@
             android:textSize="40sp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tv_nickname"
             android:layout_width="290dp"
             android:layout_height="58dp"
             android:text="Nickname"
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="/ 2500"
-                    android:textSize="36sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 

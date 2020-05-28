@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText EditEmail = (EditText) findViewById(R.id.input_email);
         EditText Editpswd = (EditText) findViewById(R.id.input_pswd);
 
-        EditEmail.setText("1234@naver.com");
+        EditEmail.setText("1234@naver.com"); // 로그인 치기 귀찮아서;;,,,
         Editpswd.setText("12345678");
 
         Button signup_btn = (Button) findViewById(R.id.btn_join);
