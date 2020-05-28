@@ -108,6 +108,7 @@ public class Mom_join extends AppCompatActivity {
                             user.put("steps", steps);
                             user.put("email", email);
                             user.put("pswd", pswd);
+                            user.put("div", 1);
 
                             db.collection("users")
                                     .add(user)

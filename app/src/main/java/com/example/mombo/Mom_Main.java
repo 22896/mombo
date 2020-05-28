@@ -1,12 +1,14 @@
 package com.example.mombo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -40,6 +42,16 @@ public class Mom_Main extends Activity implements SensorEventListener {
 
         mAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
+
+        ImageButton Button2 = (ImageButton) findViewById(R.id.myaccount);
+        Button2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View w) {
+                Intent intent = new Intent(getApplicationContext(), myaccount.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

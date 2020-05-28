@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -57,6 +58,7 @@ public class Fam_Join extends AppCompatActivity {
         mLoadingIndicatorProgress.setVisibility(View.INVISIBLE);
 
         findViewById(R.id.sign_up).setOnClickListener(signupClicked);
+
     }
 
     private View.OnClickListener signupClicked = new View.OnClickListener() {
@@ -101,6 +103,7 @@ public class Fam_Join extends AppCompatActivity {
                             user.put("hnumber", hnumber);
                             user.put("email", email);
                             user.put("pswd", pswd);
+                            user.put("div", 2);
 
                             db.collection("users")
                                     .add(user)

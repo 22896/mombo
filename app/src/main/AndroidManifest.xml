@@ -28,6 +28,7 @@
         <activity android:name=".selfdiagnosis2" />
         <activity android:name=".selfdiagnosis" />
         <activity android:name=".camera" />
+        <activity android:name=".PasswordResetActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,7 +39,9 @@
         <activity android:name=".Mom_join" />
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".Mom_Main" />
-        <activity android:name=".PasswordResetActivity" />
+        <activity
+            android:name=".talk"
+            android:theme="@style/AppTheme.NoActionBar"> </activity>
 
 
 

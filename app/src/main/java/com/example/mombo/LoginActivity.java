@@ -69,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startToast("반갑습니다.");
                                 startFirstActivity();
+                                finish();
                             } else {
                                 if (task.getException() != null) {
                                     startToast(task.getException().toString());
