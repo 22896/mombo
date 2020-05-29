@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.mombo.R;
-import com.example.mombo.Util.PreferenceUtil;
+import com.example.mombo.util.PreferenceUtil;
 import com.example.mombo.domain.MyMessage;
 
 import java.net.MalformedURLException;

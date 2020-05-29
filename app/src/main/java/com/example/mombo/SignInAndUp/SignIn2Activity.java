@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.mombo.HomeActivity;
 import com.example.mombo.R;
-import com.example.mombo.Util.PreferenceUtil;
+import com.example.mombo.util.PreferenceUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

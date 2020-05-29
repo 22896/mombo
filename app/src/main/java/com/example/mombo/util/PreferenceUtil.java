@@ -1,4 +1,4 @@
-package com.example.mombo.Util;
+package com.example.mombo.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

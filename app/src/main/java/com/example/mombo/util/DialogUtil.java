@@ -1,4 +1,4 @@
-package com.example.mombo.Util;
+package com.example.mombo.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;

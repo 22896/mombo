@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mombo.R;
-import com.example.mombo.Util.PreferenceUtil;
-import com.example.mombo.Util.VerificationUtil;
+import com.example.mombo.util.PreferenceUtil;
+import com.example.mombo.util.VerificationUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;

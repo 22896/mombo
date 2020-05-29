@@ -1,4 +1,4 @@
-package com.example.mombo.Util;
+package com.example.mombo.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

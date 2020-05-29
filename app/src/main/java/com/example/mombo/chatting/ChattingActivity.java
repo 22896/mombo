@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mombo.R;
-import com.example.mombo.Util.PreferenceUtil;
-import com.example.mombo.Util.TimeConverter;
+import com.example.mombo.util.PreferenceUtil;
+import com.example.mombo.util.TimeConverter;
 import com.example.mombo.domain.MyMessage;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
