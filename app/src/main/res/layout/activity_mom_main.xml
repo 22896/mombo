@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/dfss"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Mom_Main">
+    tools:context="com.example.mombo.HomeActivity">
 
 
     <!--상단바-->

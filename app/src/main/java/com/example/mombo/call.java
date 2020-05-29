@@ -33,7 +33,7 @@ public class call extends AppCompatActivity implements View.OnClickListener {
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), Mom_Main.class);
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
             }
         });

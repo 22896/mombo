@@ -8,9 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here.
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>  -->
+    </style>
+    <style name="forAdjustPan" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+    <style name="forStay" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowSoftInputMode">adjustUnspecified</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

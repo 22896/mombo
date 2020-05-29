@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 @SuppressWarnings("deprecation")
-public class Mom_Main extends Activity implements SensorEventListener {
+public class HomeActivity extends Activity implements SensorEventListener {
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore mFirestore;
