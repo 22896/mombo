@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+<!--    상단바-->
+    <ImageButton
+        android:id="@+id/btnCommonNoti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        android:src="@drawable/round_notifications_24" />
+    <ImageButton
+        android:id="@+id/btnCommonCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        android:src="@drawable/round_call_24" />
+    <ImageButton
+        android:id="@+id/btnCommonAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="100dp"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        android:src="@drawable/round_account_circle_24" />
+
+
+
+</LinearLayout>

@@ -2,17 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mombo">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- this line adds the required permission request -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:minSdkVersion="8"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Fam_Join" />
+        android:theme="@style/NoActionBar">
+        <activity android:name=".chatting.ChattingActivity"></activity>
+        <activity android:name=".SignInAndUp.AcceptActivity" />
+        <activity android:name=".SignInAndUp.ProfileActivity" />
+        <activity android:name=".SignInAndUp.PhoneConnectActivity" />
+        <activity android:name=".SignInAndUp.SignUpActivity" />
+        <activity android:name=".SignInAndUp.SignIn2Activity" />
+        <activity android:name=".SignInAndUp.SignInActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".check" />
         <activity android:name=".call" />
         <activity android:name=".myaccount" />
@@ -28,37 +39,9 @@
         <activity android:name=".selfdiagnosis3" />
         <activity android:name=".selfdiagnosis2" />
         <activity android:name=".selfdiagnosis" />
-        <activity android:name=".camera" />
+        <activity android:name=".CameraActivity" />
         <activity android:name=".PasswordResetActivity" />
-        <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Mom_join" />
-        <activity android:name=".ChoiceActivity" />
-        <activity android:name=".Mom_Main" />
-        <activity
-            android:name=".talk"
-            android:theme="@style/AppTheme.NoActionBar"> </activity>
-
-
-
-
-        <!-- FirebaseInstanceIdService performs security checks at runtime,
-      no need for explicit permissions despite exported="true"             -->
-        <service android:name=".My_Firebase_Messaging_Service"
-            android:stopWithTask="false">>
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
-
-
+        <activity android:name=".HomeActivity" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 </manifest>
