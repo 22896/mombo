@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
@@ -24,9 +23,10 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        initview();
 //        viewFlipperFunction();
-
+        signIn_btn = (Button) findViewById(R.id.signIn_btn);
+        signUp_btn = (Button) findViewById(R.id.signUp_btn);
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewFilpper);
 
         signIn_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +45,7 @@ public class SignInActivity extends AppCompatActivity {
 
             }
         });
+
     }
 //    private void viewFlipperFunction() {
 //        viewFlipper.startFlipping();
@@ -58,16 +59,11 @@ public class SignInActivity extends AppCompatActivity {
 //    }
 
 
-    private void initview() {
-        signIn_btn = (Button) findViewById(R.id.signIn_btn);
-        signUp_btn = (Button) findViewById(R.id.signUp_btn);
-        viewFlipper = (ViewFlipper) findViewById(R.id.viewFilpper);
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        viewFlipper.stopFlipping();
-        Log.e("viewFlipper", "멈춤!");
-    }
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        viewFlipper.stopFlipping();
+//        Log.e("viewFlipper", "멈춤!");
+//    }
 }

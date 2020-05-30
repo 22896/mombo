@@ -28,7 +28,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
+    FirebaseAuth auth;
     FirebaseDatabase database;
     DatabaseReference userRef;
 
@@ -37,28 +37,30 @@ public class SignUpActivity extends AppCompatActivity {
     private Button signUp_btn;
     String tempKey;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        mAuth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         userRef = database.getReference("user");
 
         initView();
     }
+
     public void signup(View view) {
         final String email = signUp_email_edit.getText().toString();
         final String password = signUp_password_edit.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(email, password)
+        auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(SignUpActivity.this, "확인", Toast.LENGTH_SHORT).show();
-                            FirebaseUser fUser = mAuth.getCurrentUser();
+                            FirebaseUser fUser = auth.getCurrentUser();
 //                            UserProfileChangeRequest.Builder profile = new UserProfileChangeRequest.Builder();
 //                            profile.setDisplayName(email);
 //                            fUser.updateProfile(profile.build());

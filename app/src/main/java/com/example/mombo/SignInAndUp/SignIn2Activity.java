@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mombo.chatting.ChattingActivity;
 import com.example.mombo.HomeActivity;
 import com.example.mombo.R;
 import com.example.mombo.util.PreferenceUtil;
@@ -26,14 +27,14 @@ import com.google.firebase.database.ValueEventListener;
 
 public class SignIn2Activity extends AppCompatActivity {
 
+    private Button login_btn;
+    private EditText signUp_email_edit;
+    private EditText signUp_password_edit;
+
     private FirebaseAuth mAuth;
     FirebaseDatabase database;
     DatabaseReference userRef;
     DatabaseReference myRef;
-
-    private Button login_btn;
-    private EditText signUp_email_edit;
-    private EditText signUp_password_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
