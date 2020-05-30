@@ -17,7 +17,13 @@
         <activity android:name=".SignInAndUp.PhoneConnectActivity" />
         <activity android:name=".SignInAndUp.SignUpActivity" />
         <activity android:name=".SignInAndUp.SignIn2Activity" />
-        <activity android:name=".SignInAndUp.SignInActivity" />
+        <activity android:name=".SignInAndUp.SignInActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".check" />
         <activity android:name=".call" />
         <activity android:name=".myaccount" />

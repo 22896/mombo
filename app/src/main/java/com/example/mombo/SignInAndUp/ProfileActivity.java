@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,6 +34,8 @@ import com.example.mombo.util.PreferenceUtil;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Calendar;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -52,7 +56,8 @@ public class ProfileActivity extends AppCompatActivity {
     StorageReference storageRef;
     String gender;
     String name;
-    Uri imgdUri;
+    Uri imgUri;
+    InputStream imageStream;
     ImageView imageProfile;
 
     @Override
@@ -103,9 +108,9 @@ public class ProfileActivity extends AppCompatActivity {
         addDatabase();
 
         Intent intentForHome = new Intent(ProfileActivity.this, HomeActivity.class);
-        intentForHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        intentForHome.putExtra("profileImg", downloadUrl.toString());
-        photoRef.setValue(downloadUrl.toString());
+        intentForHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intentForHome.putExtra("profileImg", imgUri.toString());
+        photoRef.setValue(imgUri.toString());
         startActivity(intentForHome);
         Intent intentForChat = new Intent(ProfileActivity.this, ChattingActivity.class);
         intentForChat.putExtra("tempkey", tempkey);
@@ -147,41 +152,61 @@ public class ProfileActivity extends AppCompatActivity {
     public void imageUpload(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
-        startActivityForResult(intent.createChooser(intent, "Select App"),999);
+        startActivityForResult(intent.createChooser(intent, "Select App"), 999);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            Uri uri = data.getData();
-//            String realPath = RealPathUtil.getRealPath(this, uri);
-//            upload(realPath);
-            upload(uri);
+            try {
+                imgUri = data.getData();
+                imageStream = getContentResolver().openInputStream(imgUri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                imageProfile.setImageBitmap(selectedImage);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                Toast.makeText(ProfileActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
+            }
+
+        } else {
+            Toast.makeText(ProfileActivity.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
         }
     }
-    private void upload(Uri file) {
-        // 파이어베이스의 스토리지 파일node
-        String temp[] = file.getPath().split("/"); // 파일이름 꺼내는건 다시
-        String filename = temp[temp.length - 1];
-        StorageReference riversRef = storageRef.child("files/" + filename);
-        riversRef.putFile(file).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                //이 라인은 더 이상 지원을 안함 ㅠㅠ 찾아봐야돼
-                imgdUri = taskSnapshot.getDownloadUri();
-                Log.d("Storage", "downloadUrl=" + imgdUri.getPath());
-                Glide.with(ProfileActivity.this)                 // 글라이드 초기화
-                        .load(imgdUri).into(imageProfile);
-                Log.e("이미지 로딩","잘 들어오나"+imgdUri);
-            }
-        })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        Toast.makeText(ProfileActivity.this
-                                , exception.getMessage()
-                                , Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
 }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (resultCode == RESULT_OK) {
+//            Uri uri = data.getData();
+////            String realPath = RealPathUtil.getRealPath(this, uri);
+////            upload(realPath);
+//            upload(uri);
+//        }
+//    }
+//    private void upload(Uri file) {
+//        // 파이어베이스의 스토리지 파일node
+//        String temp[] = file.getPath().split("/"); // 파일이름 꺼내는건 다시
+//        String filename = temp[temp.length - 1];
+//        StorageReference riversRef = storageRef.child("files/" + filename);
+//        riversRef.putFile(file).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//            @Override
+//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                //이 라인은 더 이상 지원을 안함 ㅠㅠ 찾아봐야돼
+//                imgdUri = taskSnapshot.getDownloadUri();
+//                Log.d("Storage", "downloadUrl=" + imgdUri.getPath());
+//                Glide.with(ProfileActivity.this)                 // 글라이드 초기화
+//                        .load(imgdUri).into(imageProfile);
+//                Log.e("이미지 로딩","잘 들어오나"+imgdUri);
+//            }
+//        })
+//                .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception exception) {
+//                        Toast.makeText(ProfileActivity.this
+//                                , exception.getMessage()
+//                                , Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//    }
+//}
