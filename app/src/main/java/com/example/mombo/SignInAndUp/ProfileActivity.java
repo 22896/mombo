@@ -52,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
     StorageReference storageRef;
     String gender;
     String name;
-    Uri downloadUrl;
+    Uri imgdUri;
     ImageView imageProfile;
 
     @Override
@@ -71,31 +71,31 @@ public class ProfileActivity extends AppCompatActivity {
         init();
 
 
-        textViewBirthday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new DatePickerDialog(ProfileActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                        textViewBirthday.setText(year + "년 " + (month + 1) + "월 " + dayOfMonth + "일");
-                        birthday = textViewBirthday.getText().toString();
-                    }
-                }, year, month, day).show();
-            }
-        });
-
-        textViewFirstday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new DatePickerDialog(ProfileActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                        textViewFirstday.setText(year + "년 " + (month + 1) + "월 " + dayOfMonth + "일");
-                        firstday = textViewFirstday.getText().toString();
-                    }
-                }, year, month, day).show();
-            }
-        });
+//        textViewBirthday.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                new DatePickerDialog(ProfileActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+//                        textViewBirthday.setText(year + "년 " + (month + 1) + "월 " + dayOfMonth + "일");
+//                        birthday = textViewBirthday.getText().toString();
+//                    }
+//                }, year, month, day).show();
+//            }
+//        });
+//
+//        textViewFirstday.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                new DatePickerDialog(ProfileActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+//                        textViewFirstday.setText(year + "년 " + (month + 1) + "월 " + dayOfMonth + "일");
+//                        firstday = textViewFirstday.getText().toString();
+//                    }
+//                }, year, month, day).show();
+//            }
+//        });
 
     }
 
@@ -167,11 +167,12 @@ public class ProfileActivity extends AppCompatActivity {
         riversRef.putFile(file).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                downloadUrl = taskSnapshot.getDownloadUrl();
-                Log.d("Storage", "downloadUrl=" + downloadUrl.getPath());
+                //이 라인은 더 이상 지원을 안함 ㅠㅠ 찾아봐야돼
+                imgdUri = taskSnapshot.getDownloadUri();
+                Log.d("Storage", "downloadUrl=" + imgdUri.getPath());
                 Glide.with(ProfileActivity.this)                 // 글라이드 초기화
-                        .load(downloadUrl).into(imageProfile);
-                Log.e("이미지 로딩","잘 들어오나"+downloadUrl);
+                        .load(imgdUri).into(imageProfile);
+                Log.e("이미지 로딩","잘 들어오나"+imgdUri);
             }
         })
                 .addOnFailureListener(new OnFailureListener() {

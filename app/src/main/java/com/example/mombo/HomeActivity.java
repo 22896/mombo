@@ -2,99 +2,150 @@ package com.example.mombo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.mombo.chatting.ChattingActivity;
 
 @SuppressWarnings("deprecation")
-public class HomeActivity extends Activity implements SensorEventListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private FirebaseAuth mAuth;
-    private FirebaseFirestore mFirestore;
-
-    TextView tv_steps;
-    TextView tv_nickname;
-    ImageButton call;
-    SensorManager sensorManager;
-
-    boolean running = false;
-
+    TextView tvAddHomeAnniversary;
+    ConstraintLayout containerNames;
+    ConstraintLayout containerViewContents;
+    ImageButton btnCommonHome;
+    ImageButton btnCommonCamera;
+    ImageButton btnCommonChatting;
+    ImageButton btnCommonRecord;
+    ImageView ivBackground;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mom_main);
+        setContentView(R.layout.activity_home);
 
-        tv_steps = (TextView) findViewById(R.id.tv_steps);
-        tv_nickname = (TextView) findViewById(R.id.tv_nickname);
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        call = (ImageButton) findViewById((R.id.call));
+        initView();
+        initListener();
+        initBackground();
+//        initFragment();
+    }
 
-        mAuth = FirebaseAuth.getInstance();
-        mFirestore = FirebaseFirestore.getInstance();
+    private void initBackground() {
+        ivBackground=(ImageView)findViewById(R.id.imageView);
+    }
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.myaccount);
-        Button2.setOnClickListener(new View.OnClickListener() {
+    public void initFragment(){
+        Log.e("---------Activity----","  [Add] ListFragment()-----");
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .add(R.id.container, new MainFragment())    // ListFragment.onAttach(this)인 셈
+//                .commit();
+        Log.e("---------Activity----","  [Commit] ListFragment()-----");
 
-            @Override
-            public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), myaccount.class);
-                startActivity(intent);
+    }
+    public void initListener(){
+        tvAddHomeAnniversary.setOnClickListener(this);
+        containerViewContents.setOnClickListener(this);
+        containerNames.setOnClickListener(this);
+        btnCommonHome.setOnClickListener(this);
+        btnCommonCamera.setOnClickListener(this);
+        btnCommonChatting.setOnClickListener(this);
+        btnCommonRecord.setOnClickListener(this);
+    }
+
+    public void initView(){
+        // 등록버튼[+버튼 클릭시], 기념일 클릭시 리스트 이동, 이름들 선택시 리스트 버튼
+//        tvAddHomeAnniversary = (TextView) findViewById(R.id.tvAddHomeAnniversary);
+//        containerViewContents= (ConstraintLayout) findViewById(R.id.containerViewContents);
+//        containerNames       = (ConstraintLayout) findViewById(R.id.containerNames);
+        btnCommonHome        = (ImageButton) findViewById(R.id.btnCommonHome);
+        btnCommonCamera      = (ImageButton) findViewById(R.id.btnCommonCamera);
+        btnCommonChatting    = (ImageButton) findViewById(R.id.btnCommonChatting);
+        btnCommonRecord    = (ImageButton) findViewById(R.id.btnCommonRecord);
+    }
+
+    public static final int SELECT_IMAGE=1003;
+    @Override
+    public void onClick(View view) {
+        int id=view.getId();
+        switch(id){
+//            case R.id.tvAddHomeAnniversary :
+//                startActivity(new Intent(HomeActivity.this, AnniversaryListActivity.class));
+//                Toast.makeText(HomeActivity.this, "기념일 누름",Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.containerViewContents :
+//            case R.id.containerNames :
+//                startActivity(new Intent(HomeActivity.this, CalendarWriteActivity.class));
+//                Toast.makeText(HomeActivity.this, "add 기념일 누름",Toast.LENGTH_SHORT).show();
+//                break;
+            case R.id.btnCommonHome :
+                btnCommonHome.setImageResource(R.drawable.home_on);
+//                btnCommonMore.setImageResource(R.drawable.my_off);
+                break;
+            case R.id.btnCommonCamera :
+//                btnCommonHome.setImageResource(R.drawable.home_off);
+//                btnCommonMore.setImageResource(R.drawable.my_on);
+                startActivity(new Intent(HomeActivity.this, CameraActivity.class));
+                break;
+            case R.id.btnCommonChatting:
+                startActivity(new Intent(HomeActivity.this, ChattingActivity.class));
+                break;
+
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SELECT_IMAGE)
+        {
+            if (resultCode == Activity.RESULT_OK)
+            {
+                if (data != null) {
+                    try {
+                        Uri selectedImage = data.getData();
+                        String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+                        Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                        cursor.moveToFirst();
+
+                        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                        String filePath = cursor.getString(columnIndex);
+                        cursor.close();
+
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
+                        ivBackground.setImageBitmap(bitmap);
+
+                        saveDB();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED)
+            {
+                Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
             }
-        });
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        running = true;
-        Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        if(countSensor != null) {
-            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
-        } else {
-            Toast.makeText(this, "센서가 이상해요", Toast.LENGTH_SHORT).show();
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        running = false;
-        //sensorManager.registerListener(this);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (sensorManager != null)
-            sensorManager.unregisterListener(this);
-    }
-
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        if(running) {
-            tv_steps.setText(String.valueOf(event.values[0]));
-        }
-    }
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    private void saveDB() {
 
     }
 }

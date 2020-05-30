@@ -12,7 +12,8 @@
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:src="@drawable/splash" />
+        />
+<!--    android:src="@drawable/splash"-->
 
     <TextView
         android:layout_width="fill_parent"

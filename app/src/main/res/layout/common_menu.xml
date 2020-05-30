@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="3"
+    android:weightSum="4"
     android:background="#FFFFFF">
+
     <ImageButton
         android:id="@+id/btnCommonHome"
         android:layout_width="wrap_content"
@@ -15,7 +16,16 @@
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="#00ffffff"
-        app:srcCompat="@drawable/home_on" />
+        android:src="@drawable/round_home_24" />
+
+    <ImageButton
+        android:id="@+id/btnCommonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        android:src="@drawable/round_camera_alt_24" />
 
     <ImageButton
         android:id="@+id/btnCommonChatting"
@@ -24,14 +34,14 @@
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="#00ffffff"
-        app:srcCompat="@drawable/chatting_off" />
+        android:src="@drawable/round_chat_24" />
 
     <ImageButton
-        android:id="@+id/btnCommonMore"
+        android:id="@+id/btnCommonRecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="#00ffffff"
-        app:srcCompat="@drawable/my_off" />
+        android:src="@drawable/round_assessment_24" />
 </LinearLayout>

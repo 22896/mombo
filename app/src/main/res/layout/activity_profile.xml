@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.project.between.signInAndUp.ProfileActivity">
+    tools:context="com.example.mombo.SignInAndUp.ProfileActivity">
 
     <RadioGroup
         android:id="@+id/radiogender"
         android:layout_width="145dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="216dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,14 +25,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="남자" />
+            android:text="가족" />
 
         <RadioButton
             android:id="@+id/radiofemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="여자" />
+            android:text="산모" />
     </RadioGroup>
 
     <EditText
@@ -58,7 +59,7 @@
         android:layout_marginTop="19dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="생일"
+        android:hint="병원번호"
         android:inputType="textPersonName"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -109,4 +110,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

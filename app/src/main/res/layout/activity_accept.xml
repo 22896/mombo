@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".SignInAndUp.AcceptActivity">
 
     <TextView
@@ -54,17 +55,16 @@
         android:id="@+id/download_btn"
         android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="downloadLink"
         android:text="다운로드 링크 보내기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time_edit"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.107" />
 
     <TextView
         android:id="@+id/textView3"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="아래 버튼을 눌러 between 다운로드 링크를 보내주세요."
+        android:text="위의 버튼을 눌러 다운로드 링크를 보내주세요."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

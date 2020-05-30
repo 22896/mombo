@@ -82,6 +82,7 @@ public class AcceptActivity extends AppCompatActivity {
     public void downloadLink(View view) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
+        //앱 주소 쓰가(현재는 비트윈 구글플레이주소
         String text = "https://play.google.com/store/apps/details?id=kr.co.vcnc.android.couple";
         intent.putExtra(Intent.EXTRA_TEXT, text);
 

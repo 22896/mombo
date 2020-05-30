@@ -33,10 +33,9 @@
         <activity android:name=".selfdiagnosis3" />
         <activity android:name=".selfdiagnosis2" />
         <activity android:name=".selfdiagnosis" />
-        <activity android:name=".camera" />
+        <activity android:name=".CameraActivity" />
         <activity android:name=".PasswordResetActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".talk" />
     </application>
 
 </manifest>
