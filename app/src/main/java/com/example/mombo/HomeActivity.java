@@ -1,9 +1,12 @@
 package com.example.mombo;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.mombo.chatting.ChattingActivity;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 @SuppressWarnings("deprecation")
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,6 +44,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+        try {
+            String token = FirebaseInstanceId.getInstance().getToken();
+            Log.d("IDService", "device token : " + token);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
 
         initView();
         initListener();
@@ -146,6 +158,37 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void saveDB() {
+
+    }
+    private void createNotificationChannel() {
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        // The id of the channel.
+        String id = "alarm_channel_id";
+
+        // The user-visible name of the channel.
+        CharSequence name = getString(R.string.channel_name);
+
+        // The user-visible description of the channel.
+        String description = getString(R.string.channel_description);
+
+        int importance = NotificationManager.IMPORTANCE_LOW;
+
+        NotificationChannel mChannel = new NotificationChannel(id, name, importance);
+
+// Configure the notification channel.
+        mChannel.setDescription(description);
+        mChannel.enableLights(true);
+
+// Sets the notification light color for notifications posted to this
+// channel, if the device supports this feature.
+        mChannel.setLightColor(Color.RED);
+        mChannel.enableVibration(true);
+        mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+
+        mNotificationManager.createNotificationChannel(mChannel);
+
 
     }
 }
