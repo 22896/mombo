@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.project.between.more.MoreActivity"
     android:paddingTop="100sp"
     android:paddingLeft="19sp"
     android:paddingRight="19sp"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+<!--    tools:context="com.project.between.more.MoreActivity"-->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,9 +20,10 @@
                 android:layout_height="118sp"
                 android:scaleType="centerCrop"
                 android:clickable="true"
-                android:src="@drawable/ballon1"
                 android:layout_weight="20"
                 android:onClick="onClick"/>
+
+<!--            android:src="@drawable/ballon1"-->
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"

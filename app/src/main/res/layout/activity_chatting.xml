@@ -27,9 +27,9 @@
         android:onClick="sendMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="bottom|right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:backgroundTint="@color/colorPrimaryDark"
@@ -39,18 +39,12 @@
 
     <EditText
         android:id="@+id/editTextPutMessage"
-        android:layout_width="254dp"
+        android:layout_width="300dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:ems="10"
+        android:layout_marginBottom="20dp"
         android:hyphenationFrequency="none"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/buttonSendMessage" />
 

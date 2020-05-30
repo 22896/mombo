@@ -49,7 +49,7 @@ public class My_Firebase_Messaging_Service extends FirebaseMessagingService {
 
 
     /**
-     * remoteMessage 메세지 안애 getData와 getNotification이 있습니다.
+     * remoteMessage 메세지 안에 getData와 getNotification이 있습니다.
      * 이부분은 차후 테스트 날릴때 설명 드리겠습니다.
      * **/
     private void sendNotification(RemoteMessage remoteMessage) {

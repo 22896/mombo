@@ -10,48 +10,48 @@
 
 
         <!--상단바-->
-        <LinearLayout
-            android:id="@+id/rv_1"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:baselineAligned="true"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="1dp">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/rv_1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:baselineAligned="true"-->
+<!--            android:orientation="horizontal"-->
+<!--            tools:layout_editor_absoluteX="110dp"-->
+<!--            tools:layout_editor_absoluteY="1dp">-->
 
-            <ImageButton
-                android:id="@+id/alarm"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@android:color/transparent"
-                android:padding="0dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/noun_bell_3319638" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/alarm"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="0dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/noun_bell_3319638" />-->
 
-            <ImageButton
-                android:id="@+id/call"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginEnd="246dp"
-                android:layout_marginRight="246dp"
-                android:layout_marginBottom="672dp"
-                android:background="@android:color/transparent"
-                android:padding="0dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/noun_phone_1778832" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/call"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginEnd="246dp"-->
+<!--                android:layout_marginRight="246dp"-->
+<!--                android:layout_marginBottom="672dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="0dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/noun_phone_1778832" />-->
 
-            <ImageButton
-                android:id="@+id/myaccount"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@android:color/transparent"
-                android:padding="0dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/noun_user_2699583" />
-        </LinearLayout>
+<!--            <ImageButton-->
+<!--                android:id="@+id/myaccount"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="0dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/noun_user_2699583" />-->
+<!--        </LinearLayout>-->
 
         <!--    진단부분-->
         <LinearLayout
@@ -142,60 +142,60 @@
         </LinearLayout>
 
         <!--하단 바-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:layout_marginBottom="37dp"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            android:layout_marginRight="60dp"-->
+<!--            android:layout_marginBottom="37dp"-->
+<!--            android:orientation="horizontal">-->
 
-            <ImageButton
-                android:id="@+id/home"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:padding="3dp"
-                android:paddingTop="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/home_on" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/home"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="3dp"-->
+<!--                android:paddingTop="10dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/home_on" />-->
 
-            <ImageButton
-                android:id="@+id/cam"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/noun_video_camera_3318574" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/cam"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="0dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/noun_video_camera_3318574" />-->
 
-            <ImageButton
-                android:id="@+id/message"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:padding="4dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/chatting_off" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/message"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/chatting_off" />-->
 
-            <ImageButton
-                android:id="@+id/list"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:padding="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/noun_menu_2091765" />
-        </LinearLayout>
+<!--            <ImageButton-->
+<!--                android:id="@+id/list"-->
+<!--                android:layout_width="52dp"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="10dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/noun_menu_2091765" />-->
+<!--        </LinearLayout>-->
 </RelativeLayout>

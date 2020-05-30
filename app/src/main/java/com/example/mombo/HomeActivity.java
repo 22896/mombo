@@ -108,16 +108,21 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 //                Toast.makeText(HomeActivity.this, "add 기념일 누름",Toast.LENGTH_SHORT).show();
 //                break;
             case R.id.btnCommonHome :
-                btnCommonHome.setImageResource(R.drawable.home_on);
+                btnCommonHome.setImageResource(R.drawable.round_home_24);
 //                btnCommonMore.setImageResource(R.drawable.my_off);
                 break;
             case R.id.btnCommonCamera :
-//                btnCommonHome.setImageResource(R.drawable.home_off);
+                btnCommonCamera.setImageResource(R.drawable.round_camera_alt_24);
 //                btnCommonMore.setImageResource(R.drawable.my_on);
                 startActivity(new Intent(HomeActivity.this, CameraActivity.class));
                 break;
             case R.id.btnCommonChatting:
                 startActivity(new Intent(HomeActivity.this, ChattingActivity.class));
+                break;
+            case R.id.btnCommonRecord :
+                btnCommonCamera.setImageResource(R.drawable.round_assessment_24);
+//                btnCommonMore.setImageResource(R.drawable.my_on);
+                startActivity(new Intent(HomeActivity.this, RecordActivity.class));
                 break;
 
         }

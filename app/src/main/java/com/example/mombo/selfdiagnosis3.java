@@ -14,16 +14,16 @@ public class selfdiagnosis3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selfdiagnosis3);
-
-        ImageButton Button6 = (ImageButton) findViewById(R.id.imageButton8);
-        Button6.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), myaccount.class);
-                startActivity(intent);
-            }
-        });
+//
+//        ImageButton Button6 = (ImageButton) findViewById(R.id.imageButton8);
+//        Button6.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View w) {
+//                Intent intent = new Intent(getApplicationContext(), myaccount.class);
+//                startActivity(intent);
+//            }
+//        });
 
         ImageButton Button1 = (ImageButton) findViewById(R.id.home);
         Button1.setOnClickListener(new View.OnClickListener() {
@@ -44,16 +44,16 @@ public class selfdiagnosis3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        ImageButton Button5 = (ImageButton) findViewById(R.id.message);
-        Button5.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), talk.class);
-                startActivity(intent);
-            }
-        });
+//
+//        ImageButton Button5 = (ImageButton) findViewById(R.id.message);
+//        Button5.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View w) {
+//                Intent intent = new Intent(getApplicationContext(), talk.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         ImageButton Button4 = (ImageButton) findViewById(R.id.list);
@@ -61,7 +61,7 @@ public class selfdiagnosis3 extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), Record.class);
+                Intent intent = new Intent(getApplicationContext(), RecordActivity.class);
                 startActivity(intent);
             }
         });
