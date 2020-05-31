@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commonMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:id="@+id/btnCommonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ffffff"
+        android:layout_weight="1"
+        android:src="@drawable/baseline_home_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/btnCommonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ffffff"
+        android:layout_weight="1"
+        android:src="@drawable/round_camera_enhance_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/btnCommonTalk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ffffff"
+        android:layout_weight="1"
+        android:src="@drawable/round_question_answer_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/btnCommonRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00ffffff"
+        android:layout_weight="1"
+        android:src="@drawable/round_assignment_black_24dp" />
+
+</LinearLayout>

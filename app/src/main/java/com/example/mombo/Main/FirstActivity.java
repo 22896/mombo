@@ -1,75 +1,84 @@
 package com.example.mombo.Main;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.example.mombo.R;
-import com.example.mombo.Myaccount.myaccount;
 
 
-public class FirstActivity extends Activity implements SensorEventListener  {
+public class FirstActivity extends Activity implements SensorEventListener, View.OnClickListener {
 
-    public static int cnt = 0;
+    TextView tv_steps;
+    SensorManager sensorManager;
+    ImageButton btnHome, btnCamera, btnTalk, btnRecord;
 
-    private TextView tView;
-    private Button resetBtn;
-
-    private long lastTime;
-    private float speed;
-    private float lastX;
-    private float lastY;
-    private float lastZ;
-    private float x, y, z;
-
-    private static final int SHAKE_THRESHOLD = 800;
-    private static final int DATA_X = SensorManager.DATA_X;
-    private static final int DATA_Y = SensorManager.DATA_Y;
-    private static final int DATA_Z = SensorManager.DATA_Z;
-
-    private SensorManager sensorManager;
-    private Sensor accelerormeterSensor;
-
-
+    boolean running = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+
+        btnHome = (ImageButton) findViewById(R.id.btnCommonHome);
+        btnCamera = (ImageButton) findViewById(R.id.btnCommonCamera);
+        btnTalk = (ImageButton) findViewById(R.id.btnCommonTalk);
+        btnRecord = (ImageButton) findViewById(R.id.btnCommonRecord);
+        tv_steps = (TextView) findViewById(R.id.tv_steps);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         ImageButton Button2 = (ImageButton) findViewById(R.id.myaccount);
-        Button2.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), myaccount.class);
-                startActivity(intent);
-            }
-        });
+        btnCamera.setOnClickListener(this);
+        btnRecord.setOnClickListener(this);
+        btnTalk.setOnClickListener(this);
+    }
 
-    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-    accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.btnCommonCamera:
+                startActivity(new Intent(FirstActivity.this, camera.class));
+                break;
+            case R.id.btnCommonTalk :
+                startActivity(new Intent(FirstActivity.this, talk.class));
+                break;
+            case  R.id.btnCommonRecord :
+                startActivity(new Intent(FirstActivity.this, Record.class));
+        }
 
-    tView = (TextView) findViewById(R.id.cntView);
-    resetBtn = (Button) findViewById(R.id.resetBtn);
+    }
 
-        tView.setText("" + cnt);
-}
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    protected void onResume() {
+        super.onResume();
+        running = true;
+        Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        if (countSensor != null) {
+            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
+        } else {
+            Toast.makeText(this, "센서가 이상해요", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        if (accelerormeterSensor != null)
-            sensorManager.registerListener(this, accelerormeterSensor, SensorManager.SENSOR_DELAY_GAME);
+    protected void onPause() {
+        super.onPause();
+        running = false;
+        //sensorManager.registerListener(this);
     }
 
     @Override
@@ -81,25 +90,8 @@ public class FirstActivity extends Activity implements SensorEventListener  {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            long currentTime = System.currentTimeMillis();
-            long gabOfTime = (currentTime - lastTime);
-            if (gabOfTime > 100) {
-                lastTime = currentTime;
-                x = event.values[SensorManager.DATA_X];
-                y = event.values[SensorManager.DATA_Y];
-                z = event.values[SensorManager.DATA_Z];
-
-                speed = Math.abs(x + y + z - lastX - lastY - lastZ) / gabOfTime * 10000;
-
-                if (speed > SHAKE_THRESHOLD) {
-                    tView.setText("" + (++cnt));
-                }
-
-                lastX = event.values[DATA_X];
-                lastY = event.values[DATA_Y];
-                lastZ = event.values[DATA_Z];
-            }
+        if (running) {
+            tv_steps.setText(String.valueOf(event.values[0]));
         }
     }
 
@@ -107,14 +99,6 @@ public class FirstActivity extends Activity implements SensorEventListener  {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
-
-    public void mOnClick(View v) {
-        switch (v.getId()) {
-            case R.id.resetBtn :
-                cnt = 0;
-                tView.setText("" + cnt);
-                break;
-        }
-    }
 }
+
 

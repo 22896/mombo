@@ -1,15 +1,15 @@
 package com.example.mombo.Myaccount;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.mombo.Main.FirstActivity;
-import com.example.mombo.Main.MainActivity;
+import com.example.mombo.Main.LoginActivity;
 import com.example.mombo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -93,7 +93,7 @@ public class myaccount extends AppCompatActivity {
     };
 
     private void startFirstActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }

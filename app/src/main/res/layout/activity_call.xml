@@ -17,8 +17,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <!-- 이미지 뷰 클릭가능하게 안되면 버튼으로 바꾸기
-            단추 좌우반전 못함;;-->
             <ImageView
                 android:id="@+id/back"
                 android:layout_width="80dp"
@@ -58,7 +56,7 @@
 
         <!--            상담센터 전화번호 입력 안해도 보여지게-->
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/edtNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

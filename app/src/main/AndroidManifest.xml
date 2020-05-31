@@ -3,6 +3,8 @@
     package="com.example.mombo">
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- this line adds the required permission request -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +19,7 @@
         <activity android:name=".Main.camera" />
         <activity android:name=".Main.FirstActivity" />
         <activity android:name=".Main.FirstActivity2" />
-        <activity android:name=".Main.MainActivity">
+        <activity android:name=".Main.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,10 +50,7 @@
         <activity android:name=".SelfDiagnosis.selfdiagnosis2" />
         <activity android:name=".SelfDiagnosis.selfdiagnosis" />
 
-
-
-
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name=".MyFirebaseMessagingService"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
 
@@ -64,7 +63,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccent" />-->
+            android:resource="@color/colorAccent" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
@@ -72,8 +71,7 @@
 
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
 
 </manifest>

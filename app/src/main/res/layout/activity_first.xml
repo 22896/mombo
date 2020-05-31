@@ -27,7 +27,8 @@
             android:background="@android:color/transparent"
             android:padding="0dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/noun_bell_3319638" />
+            android:src="@drawable/noun_bell_3319638"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/call"
@@ -41,7 +42,8 @@
             android:background="@android:color/transparent"
             android:padding="0dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/noun_phone_1778832" />
+            android:src="@drawable/noun_phone_1778832"
+            android:contentDescription="TODO" />
 
         <ImageButton
             android:id="@+id/myaccount"
@@ -55,9 +57,9 @@
 
     <!--가운데 이미지 부분-->
     <LinearLayout
-        android:layout_below="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_1"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:orientation="vertical">
@@ -140,97 +142,43 @@
                 android:text="오늘의 걸음"
                 android:textSize="25sp" />
 
-
+            //만보기
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:gravity="center"
+                android:weightSum="2">
 
                 <TextView
-                    android:id="@+id/cntView"
-                    android:layout_width="5dp"
+                    android:id="@+id/tv_steps"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="100dp"
                     android:text="0"
                     android:textSize="36sp" />
 
                 <TextView
-                    android:id="@+id/cntView2"
-                    android:layout_width="1dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="/ 2500"
-                    android:textSize="36sp" />
+                    android:text="걸음"
+                    android:textSize="20sp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/resetBtn"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="리셋" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <!--하단 바-->
-    <LinearLayout
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottom_menu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="37dp"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/home"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_gravity="bottom"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="3dp"
-            android:paddingTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/noun_home_800461" />
-
-
-        <ImageButton
-            android:id="@+id/cam"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_gravity="bottom"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/noun_video_camera_3318574" />
-
-        <ImageButton
-            android:id="@+id/message"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_gravity="bottom"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/noun_talking_546894" />
-
-        <ImageButton
-            android:id="@+id/list"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/noun_menu_2091765" />
-    </LinearLayout>
+        android:layout_height="60dp"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </RelativeLayout>
