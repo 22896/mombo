@@ -11,33 +11,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Join_fam" />
-        <activity android:name=".check" />
-        <activity android:name=".myaccount" />
-        <activity android:name=".Record" />
-        <activity android:name=".selfdiagnosis11" />
-        <activity android:name=".selfdiagnosis10" />
-        <activity android:name=".selfdiagnosis9" />
-        <activity android:name=".selfdiagnosis8" />
-        <activity android:name=".selfdiagnosis6" />
-        <activity android:name=".selfdiagnosis7" />
-        <activity android:name=".selfdiagnosis5" />
-        <activity android:name=".selfdiagnosis4" />
-        <activity android:name=".selfdiagnosis3" />
-        <activity android:name=".selfdiagnosis2" />
-        <activity android:name=".selfdiagnosis" />
-        <activity android:name=".camera" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".Main.alarm" />
+        <activity android:name=".Main.call" />
+        <activity android:name=".Main.camera" />
+        <activity android:name=".Main.FirstActivity" />
+        <activity android:name=".Main.FirstActivity2" />
+        <activity android:name=".Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Join_mom" />
-        <activity android:name=".ChoiceActivity" />
-        <activity android:name=".FirstActivity" />
-        <activity android:name=".PasswordResetActivity" />
+        <activity android:name=".Main.Record" />
+        <activity android:name=".Main.talk" />
+
+        <activity android:name=".Myaccount.myaccount" />
+        <activity android:name=".Myaccount.PasswordResetActivity" />
+        <activity android:name=".Myaccount.ProfileResetActivity" />
+
+        <activity android:name=".SingUp.check" />
+        <activity android:name=".SingUp.ChoiceActivity" />
+        <activity android:name=".SingUp.Join_fam" />
+        <activity android:name=".SingUp.Join_mom" />
+
+        <activity android:name=".SelfDiagnosis.selfdiagnosis11" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis10" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis9" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis8" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis6" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis7" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis5" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis4" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis3" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis2" />
+        <activity android:name=".SelfDiagnosis.selfdiagnosis" />
+
 
 
 

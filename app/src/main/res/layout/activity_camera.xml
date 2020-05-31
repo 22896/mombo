@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
     android:orientation="vertical"
-    tools:context="com.example.mombo.camera">
+    tools:context="com.example.mombo.Main.camera">
     <!--    android:visibility="visible"-->
 
     <!--상단바-->
@@ -54,6 +54,7 @@
     </LinearLayout>
 
     <WebView
+        android:id="@+id/cctvweb"
         android:layout_width="362dp"
         android:layout_height="547dp"
         android:layout_marginLeft="25dp" />

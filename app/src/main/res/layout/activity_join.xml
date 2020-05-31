@@ -7,7 +7,7 @@
     android:layout_marginLeft="30dp"
     android:layout_marginRight="30dp"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Join_mom">
+    tools:context="com.example.mombo.SingUp.Join_mom">
 
 
     <TextView
@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/input_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
@@ -44,7 +44,7 @@
 
     <EditText
         android:id="@+id/input_pswd"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
@@ -64,8 +64,8 @@
     <!--                app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
 
     <EditText
-        android:id="@+id/nickname"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_nickname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
@@ -86,12 +86,12 @@
     <!--                app:layout_constraintStart_toStartOf="parent" />-->
 
     <EditText
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
+        android:id="@+id/input_phone"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="전화번호"
+        android:hint="자신의 전화번호"
         android:inputType="phone"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,12 +108,12 @@
     <!--                app:layout_constraintTop_toBottomOf="parent" />-->
 
     <EditText
-        android:id="@+id/famphone"
-        android:layout_width="wrap_content"
+        android:id="@+id/famNum_edit"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="가족 전화번호"
+        android:hint="가족의 전화번호"
         android:inputType="phone"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,18 +129,6 @@
     <!--                app:layout_constraintStart_toStartOf="parent"-->
     <!--                app:layout_constraintTop_toBottomOf="parent" />-->
 
-    <EditText
-        android:id="@+id/hnumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="병원 번호"
-        android:inputType="phone"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
-
     <!--걸음수 입력-->
     <!--            <TextView-->
     <!--                android:id="@+id/ex_walk"-->
@@ -152,8 +140,21 @@
     <!--                app:layout_constraintTop_toBottomOf="parent" />-->
 
     <EditText
+        android:id="@+id/hosNum_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="병원의 전화번호"
+        android:inputType="phone"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <EditText
         android:id="@+id/steps"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="6"
@@ -184,7 +185,7 @@
     <!--                app:layout_constraintTop_toBottomOf="parent" />-->
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/input_signup"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_gravity="right"

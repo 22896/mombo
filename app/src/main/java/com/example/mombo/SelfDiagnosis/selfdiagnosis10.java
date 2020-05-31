@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.SelfDiagnosis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
+
+import com.example.mombo.Main.FirstActivity;
+import com.example.mombo.Main.Record;
+import com.example.mombo.Main.camera;
+import com.example.mombo.R;
+import com.example.mombo.Myaccount.myaccount;
+import com.example.mombo.Main.talk;
 
 public class selfdiagnosis10 extends AppCompatActivity {
 

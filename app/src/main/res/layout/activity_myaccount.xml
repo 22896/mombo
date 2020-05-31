@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    tools:context="com.example.mombo.myaccount">
+    tools:context="com.example.mombo.Myaccount.myaccount">
 
 
         <ImageButton
@@ -40,11 +40,11 @@
             app:layout_constraintVertical_bias="0.024" />
 
         <Button
-            android:id="@+id/modify"
+            android:id="@+id/updatebtn"
             android:layout_width="414dp"
             android:layout_height="55dp"
             android:background="@color/gray"
-            android:text="내 이름 수정"
+            android:text="개인정보 수정"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -61,10 +61,10 @@
             android:layout_marginLeft="4dp"
             android:layout_marginBottom="20dp"
             android:background="@color/gray"
-            android:text="병원, 상담센터 변경"
+            android:text="병원 및 상담 전화번호 변경"
             app:layout_constraintBottom_toTopOf="@+id/modify3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/modify"
+            app:layout_constraintTop_toBottomOf="@+id/updatebtn"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
@@ -75,19 +75,19 @@
             android:layout_marginBottom="16dp"
             android:background="@color/gray"
             android:text="걸음수 변경"
-            app:layout_constraintBottom_toTopOf="@+id/modify4"
+            app:layout_constraintBottom_toTopOf="@+id/btnDelete"
             app:layout_constraintTop_toBottomOf="@+id/modify2"
             tools:layout_editor_absoluteX="-2dp" />
 
         <Button
-            android:id="@+id/modify4"
+            android:id="@+id/btnDelete"
             android:layout_width="414dp"
             android:layout_height="55dp"
 
             android:layout_marginTop="56dp"
             android:layout_marginBottom="16dp"
             android:background="@color/gray"
-            android:text="가족과의 연결 끊기"
+            android:text="탈퇴하기"
             app:layout_constraintBottom_toTopOf="@+id/modify5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/modify3" />
 
         <Button
-            android:id="@+id/sendButton"
+            android:id="@+id/bt_update"
             android:layout_width="414dp"
             android:layout_height="55dp"
             android:layout_marginBottom="156dp"

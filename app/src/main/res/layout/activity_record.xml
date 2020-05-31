@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Record">
+    tools:context="com.example.mombo.Main.Record">
 
 
     <!--상단바-->

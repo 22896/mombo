@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.SelfDiagnosis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,13 +8,19 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
 
-public class selfdiagnosis extends AppCompatActivity {
+import com.example.mombo.Main.FirstActivity;
+import com.example.mombo.Main.Record;
+import com.example.mombo.Main.camera;
+import com.example.mombo.R;
+import com.example.mombo.Myaccount.myaccount;
+import com.example.mombo.Main.talk;
+
+public class selfdiagnosis4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selfdiagnosis);
-
+        setContentView(R.layout.activity_selfdiagnosis4);
 
         ImageButton Button6 = (ImageButton) findViewById(R.id.imageButton8);
         Button6.setOnClickListener(new View.OnClickListener() {
@@ -72,11 +78,10 @@ public class selfdiagnosis extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), selfdiagnosis2.class);
+                Intent intent = new Intent(getApplicationContext(), selfdiagnosis5.class);
                 startActivity(intent);
             }
         });
-
 
     }
 }

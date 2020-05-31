@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,18 +6,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.mombo.R;
+import com.example.mombo.Myaccount.myaccount;
 
 
 public class FirstActivity extends Activity implements SensorEventListener  {
@@ -48,6 +45,7 @@ public class FirstActivity extends Activity implements SensorEventListener  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
 
 
 

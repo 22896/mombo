@@ -1,14 +1,16 @@
-package com.example.mombo;
+package com.example.mombo.SingUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class call extends AppCompatActivity {
+import com.example.mombo.R;
+
+public class check extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_call);
+        setContentView(R.layout.activity_check);
     }
 }

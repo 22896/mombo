@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.Myaccount;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,26 +8,53 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.mombo.Main.FirstActivity;
+import com.example.mombo.Main.MainActivity;
+import com.example.mombo.R;
+import com.example.mombo.SingUp.Join_mom;
+import com.example.mombo.UserData;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.auth.User;
 
 public class myaccount extends AppCompatActivity {
+
+    Button btnDelete;
+    DatabaseReference database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myaccount);
 
+        btnDelete = findViewById(R.id.btnDelete);
+
+        database = FirebaseDatabase.getInstance().getReference().child("User Data");
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            database.removeValue();
+            }
+        });
+
+
+
+
+
 
         findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
 
 
 
-        Button Button1 = (Button) findViewById(R.id.modify);
+        Button Button1 = (Button) findViewById(R.id.updatebtn);
         Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Join_mom.class);
+                Intent intent = new Intent(getApplicationContext(), ProfileResetActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +69,7 @@ public class myaccount extends AppCompatActivity {
             }
         });
 
-        Button Button3 = (Button) findViewById(R.id.sendButton);
+        Button Button3 = (Button) findViewById(R.id.bt_update);
         Button3.setOnClickListener(new View.OnClickListener() {
 
             @Override

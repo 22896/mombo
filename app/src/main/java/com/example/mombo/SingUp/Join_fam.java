@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.SingUp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mombo.Main.MainActivity;
+import com.example.mombo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -47,11 +49,11 @@ public class Join_fam extends AppCompatActivity {
 
         input_email = (EditText) findViewById(R.id.input_email);
         input_pswd = (EditText) findViewById(R.id.input_pswd);
-        input_nickname = (EditText) findViewById((R.id.nickname));
-        input_phone = (EditText) findViewById((R.id.phone));
-        input_hnumber = (EditText) findViewById((R.id.hnumber));
+        input_nickname = (EditText) findViewById((R.id.input_nickname));
+        input_phone = (EditText) findViewById((R.id.input_phone));
+        input_hnumber = (EditText) findViewById((R.id.famNum_edit));
 
-        input_signup = (Button) findViewById(R.id.signup);
+        input_signup = (Button) findViewById(R.id.input_signup);
         input_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

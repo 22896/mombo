@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/saaaa"
-    tools:context="com.example.mombo.selfdiagnosis10">
+    tools:context="com.example.mombo.SelfDiagnosis.selfdiagnosis10">
 
 
         <!--상단바-->

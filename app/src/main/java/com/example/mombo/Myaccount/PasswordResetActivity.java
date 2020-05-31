@@ -1,4 +1,4 @@
-package com.example.mombo;
+package com.example.mombo.Myaccount;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mombo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,7 +28,7 @@ public class PasswordResetActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.sendButton).setOnClickListener(onClickListener);
+        findViewById(R.id.bt_update).setOnClickListener(onClickListener);
     }
 
 
@@ -35,7 +36,7 @@ public class PasswordResetActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             switch (v.getId()){
-                case R.id.sendButton:
+                case R.id.bt_update:
                     send();
                     break;
             }
@@ -43,7 +44,7 @@ public class PasswordResetActivity extends AppCompatActivity {
     };
 
     private void  send(){
-        String email = ((EditText)findViewById(R.id.emailEditText)).getText().toString();
+        String email = ((EditText)findViewById(R.id.nicknameEditText)).getText().toString();
 
 
         if(email.length() > 0) {

@@ -1,21 +1,26 @@
-package com.example.mombo;
+package com.example.mombo.Main;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.mombo.R;
 
-public class talk extends AppCompatActivity {
+public class alarm extends AppCompatActivity {
+ImageButton back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_talk);
+        setContentView(R.layout.activity_alarm);
 
-        ImageButton Button2 = (ImageButton) findViewById(R.id.home);
-        Button2.setOnClickListener(new View.OnClickListener() {
+        back_btn = (ImageButton) findViewById(R.id.back);
+
+        ImageButton Button1 = (ImageButton) findViewById(R.id.back);
+        Button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View w) {
