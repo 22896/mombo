@@ -31,10 +31,10 @@
         <activity android:name=".Myaccount.PasswordResetActivity" />
         <activity android:name=".Myaccount.ProfileResetActivity" />
 
-        <activity android:name=".SingUp.check" />
-        <activity android:name=".SingUp.ChoiceActivity" />
-        <activity android:name=".SingUp.Join_fam" />
-        <activity android:name=".SingUp.Join_mom" />
+        <activity android:name=".SignUp.check" />
+        <activity android:name=".SignUp.ChoiceActivity" />
+        <activity android:name=".SignUp.Join_fam" />
+        <activity android:name=".SignUp.Join_mom" />
 
         <activity android:name=".SelfDiagnosis.selfdiagnosis11" />
         <activity android:name=".SelfDiagnosis.selfdiagnosis10" />

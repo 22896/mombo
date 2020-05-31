@@ -22,7 +22,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
             android:text="맘보"
-            android:textSize="30dp"/>
+            android:textSize="30dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,9 +71,8 @@
                     android:layout_height="60dp"
                     android:layout_marginBottom="92dp"
                     android:hint="@string/hint_pw"
-                    android:singleLine="true"
-                    android:password="true"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
             </LinearLayout>
 
             <ImageButton

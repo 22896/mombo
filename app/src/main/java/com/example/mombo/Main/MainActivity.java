@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mombo.R;
-import com.example.mombo.SingUp.Join_mom;
+import com.example.mombo.SignUp.ChoiceActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
         mAuth = FirebaseAuth.getInstance();
 
         input_email = findViewById(R.id.input_email);
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), Join_mom.class);
+                Intent intent = new Intent(getApplicationContext(), ChoiceActivity.class);
                 startActivity(intent);
             }
         });
@@ -79,22 +78,19 @@ public class MainActivity extends AppCompatActivity {
 
         if (email.equals("")) {
             Toast.makeText(MainActivity.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        else if (password.equals("")) {
+        } else if (password.equals("")) {
             Toast.makeText(MainActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        else if (password.length() < 6) {
+        } else if (password.length() < 6) {
             Toast.makeText(MainActivity.this, "비밀번호는 6자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        else {
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        } else {
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Intent i = new Intent(MainActivity.this, FirstActivity.class);
                         startActivity(i);
                         finish();
-                    }else {
+                    } else {
                         Toast.makeText(MainActivity.this, "문제가 발생하였습니다.", Toast.LENGTH_LONG).show();
 
                     }
@@ -103,39 +99,37 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
-
     }
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private void createNotificationChannel() {
-        NotificationManager mNotificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        @RequiresApi(api = Build.VERSION_CODES.O)
+        private void createNotificationChannel () {
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // The id of the channel.
-        String id = "alarm_channel_id";
+            // The id of the channel.
+            String id = "alarm_channel_id";
 
-        // The user-visible name of the channel.
-        CharSequence name = getString(R.string.channel_name);
+            // The user-visible name of the channel.
+            CharSequence name = getString(R.string.channel_name);
 
-        // The user-visible description of the channel.
-        String description = getString(R.string.channel_description);
+            // The user-visible description of the channel.
+            String description = getString(R.string.channel_description);
 
-        int importance = NotificationManager.IMPORTANCE_LOW;
+            int importance = NotificationManager.IMPORTANCE_LOW;
 
-        NotificationChannel mChannel = new NotificationChannel(id, name, importance);
+            NotificationChannel mChannel = new NotificationChannel(id, name, importance);
 
 // Configure the notification channel.
-        mChannel.setDescription(description);
-        mChannel.enableLights(true);
+            mChannel.setDescription(description);
+            mChannel.enableLights(true);
 
 // Sets the notification light color for notifications posted to this
 // channel, if the device supports this feature.
-        mChannel.setLightColor(Color.RED);
-        mChannel.enableVibration(true);
-        mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+            mChannel.setLightColor(Color.RED);
+            mChannel.enableVibration(true);
+            mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
 
-        mNotificationManager.createNotificationChannel(mChannel);
+            mNotificationManager.createNotificationChannel(mChannel);
 
 
+        }
     }
-}

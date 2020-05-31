@@ -1,4 +1,4 @@
-package com.example.mombo.SingUp;
+package com.example.mombo.SignUp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

@@ -11,12 +11,9 @@ import android.widget.ImageButton;
 import com.example.mombo.Main.FirstActivity;
 import com.example.mombo.Main.MainActivity;
 import com.example.mombo.R;
-import com.example.mombo.SingUp.Join_mom;
-import com.example.mombo.UserData;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.auth.User;
 
 public class myaccount extends AppCompatActivity {
 

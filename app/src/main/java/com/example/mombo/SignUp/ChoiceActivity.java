@@ -1,4 +1,4 @@
-package com.example.mombo.SingUp;
+package com.example.mombo.SignUp;
 
 import android.content.Intent;
 import android.os.Bundle;

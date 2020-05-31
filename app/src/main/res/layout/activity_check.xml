@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
     android:orientation="vertical"
-    tools:context="com.example.mombo.SingUp.check">
+    tools:context="com.example.mombo.SignUp.check">
 
     <!--상단바-->
     <LinearLayout
