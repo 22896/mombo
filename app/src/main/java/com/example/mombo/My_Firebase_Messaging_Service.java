@@ -7,59 +7,61 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
-import android.app.NotificationChannel;
 
 
-
-
-
-
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
+import com.example.mombo.util.MyJobService;
+import com.firebase.jobdispatcher.FirebaseJobDispatcher;
+import com.firebase.jobdispatcher.GooglePlayDriver;
+import com.firebase.jobdispatcher.Job;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import java.net.URLDecoder;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class My_Firebase_Messaging_Service extends FirebaseMessagingService {
 
 
-
-
-
-
-    @Override
+   /* @Override
     public void onNewToken(String s) {
         super.onNewToken(s);
         Log.e("Firebase", "FirebaseInstanceIDService : " + s);
     }
 
-    /**
-     * 메세지를 받았을 경우 그 메세지에 대하여 구현하는 부분입니다.
-     * **/
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
         if (remoteMessage != null && remoteMessage.getData().size() > 0) {
             sendNotification(remoteMessage);
         }
+
+        // Check if message contains a notification payload.
+        if (remoteMessage.getNotification() != null) {
+            Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+        }
+
     }
 
 
-    /**
-     * remoteMessage 메세지 안에 getData와 getNotification이 있습니다.
-     * 이부분은 차후 테스트 날릴때 설명 드리겠습니다.
-     * **/
+
+
+
     private void sendNotification(RemoteMessage remoteMessage) {
 
         String title = remoteMessage.getData().get("title");
         String message = remoteMessage.getData().get("message");
 
-        /**
-         * 오레오 버전부터는 Notification Channel이 없으면 푸시가 생성되지 않는 현상이 있습니다.
-         * **/
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
             String channelid= "alarm_channel_id";
@@ -129,10 +131,170 @@ public class My_Firebase_Messaging_Service extends FirebaseMessagingService {
         }
 
     }
+*/
+
+    private  static final String TAG = "My_Firebase_Message_Service";
+
+    private String title = "";
+    private String body = "";
+    private String color = "";
+ /*   @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        // ...
+
+        // TODO(developer): Handle FCM messages here.
+        // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
+        Log.d(TAG, "From: " + remoteMessage.getFrom());
+
+        // Check if message contains a data payload.
+        if (remoteMessage.getData().size() > 0) {
+            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+
+            if (*//* Check if data needs to be processed by long running job *//* true) {
+                // For long-running tasks (10 seconds or more) use WorkManager.
+                scheduleJob();
+            } else {
+                // Handle message within 10 seconds
+                handleNow();
+            }
+
+        }
+*/
+ @Override
+ public void onMessageReceived(@NonNull RemoteMessage remoteMessage)
+ {
+     sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
+ }
+
+
+    /**
+     * 푸시 알림 정보를 받아서 앱에서 알림을 띄워준다.
+     *
+     * @param body
+     */
+    private void sendNotification(String title, String body)
+    {
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+
+        String chId = "test";
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);// 알림 왔을때 사운드.
+
+        NotificationCompat.Builder notiBuilder = new NotificationCompat.Builder(this, chId)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(title)
+                .setContentText(body)
+                .setAutoCancel(true)
+                .setSound(defaultSoundUri)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setContentIntent(pendingIntent);
+
+
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        /* 안드로이드 오레오 버전 대응 */
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        {
+            String chName = "ch name";
+            NotificationChannel channel = new NotificationChannel(chId, chName, NotificationManager.IMPORTANCE_HIGH);
+            manager.createNotificationChannel(channel);
+        }
+        manager.notify(0, notiBuilder.build());
+
+    }
 
 
 
 
+
+        // Also if you intend on generating your own notifications as a result of a received FCM
+        // message, here is where that should be initiated. See sendNotification method below.
+
+
+    /*@Override
+    public void onMessageReceived(RemoteMessage remoteMessage){
+
+
+
+            // Also if you intend on generating your own notifications as a result of a received FCM
+            // message, here is where that should be initiated. See sendNotification method below.
+
+       Log.d(TAG, "From: " + remoteMessage.getFrom());
+
+        if (remoteMessage.getData().size() > 0){
+            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+            title = remoteMessage.getData().get("title");
+            body = remoteMessage.getData().get("body");
+            color = remoteMessage.getData().get("color");
+
+            if (true){
+                scheduleJob();
+            } else {
+                handleNow();
+            }
+        }
+
+        if (remoteMessage.getNotification() !=null){
+            Log.d(TAG, "Message Notification Body:" + remoteMessage.getNotification().getColor());
+            Log.d(TAG, "Message Notification Body:" + remoteMessage.getNotification().getIcon());
+            Log.d(TAG, "Message Notification Body:" + remoteMessage.getNotification().getTitle());
+            Log.d(TAG, "Message Notification Body:" + remoteMessage.getNotification().getBody());
+
+        }
+        sendNotification();
+    }
+*/
+/*
+
+    @Override
+    public void onNewToken(String token){
+        Log.d(TAG, "Refreshed token: " + token);
+        sendRegistrationToServer(token);
+    }
+    private void scheduleJob(){
+        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(this));
+        Job myJOb = dispatcher.newJobBuilder()
+                .setService(MyJobService.class)
+                .setTag("my-job-tag")
+                .build();
+        dispatcher.schedule(myJOb);
+    }
+    private void handleNow(){
+        Log.d(TAG, "Short lived task is done.");
+    }
+    private void sendRegistrationToServer(String token){
+    }
+    private void sendNotification(){
+        Intent intent =new Intent(this, HomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
+                PendingIntent.FLAG_ONE_SHOT);
+
+        String channelId ="alarm_channel_id";
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        NotificationCompat.Builder notificationBuilder =
+                new NotificationCompat.Builder(this, channelId)
+                        .setSmallIcon(R.mipmap.ic_launcher_round)
+                        .setContentTitle(title)
+                        .setContentText(body)
+                        .setColor(Color.parseColor(color))
+                        .setAutoCancel(true)
+                        .setSound(defaultSoundUri)
+                        .setContentIntent(pendingIntent)
+                        .setPriority(Notification.PRIORITY_HIGH);
+
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel(channelId,
+                    "Channel human readable title",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(channel);
+        }
+                notificationManager.notify(0, notificationBuilder.build());
+    }
+*/
 
 
 }

@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         initView();
         initListener();
         initBackground();
-//        initFragment();
+     initFragment();
     }
 
     private void initBackground() {
