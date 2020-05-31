@@ -46,9 +46,6 @@ public class FirstActivity extends Activity implements SensorEventListener  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-
-
-
         ImageButton Button2 = (ImageButton) findViewById(R.id.imageButton8);
         Button2.setOnClickListener(new View.OnClickListener() {
 

@@ -29,7 +29,6 @@ public class Join_mom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-
         input_email= findViewById(R.id.input_email);
         input_pswd= findViewById(R.id.input_pswd);
         input_nickname= findViewById(R.id.input_nickname);

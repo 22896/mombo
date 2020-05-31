@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
     private void signIn() {
         String email, password;
         email = input_email.getText().toString().trim();
