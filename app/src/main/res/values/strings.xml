@@ -17,4 +17,7 @@
     <string name="ok">확인</string>
 
     <string name="account">내 정보</string>
+    <string name="default_notification_channel_id" />
+    <string name="channel_name" />
+    <string name="channel_description" />
 </resources>
