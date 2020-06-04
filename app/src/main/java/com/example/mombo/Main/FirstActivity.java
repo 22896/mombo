@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.mombo.Myaccount.myaccount;
 import com.example.mombo.R;
 
 
@@ -23,7 +24,8 @@ public class FirstActivity extends Activity implements SensorEventListener, View
 
     TextView tv_steps;
     SensorManager sensorManager;
-    ImageButton btnHome, btnCamera, btnTalk, btnRecord;
+    ImageButton btnCall, btnAlarm, btnAccount; //상단바 아이콘
+    ImageButton btnHome, btnCamera, btnTalk, btnRecord;  //하단바 아이콘
 
     boolean running = false;
 
@@ -32,6 +34,9 @@ public class FirstActivity extends Activity implements SensorEventListener, View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
+        btnAlarm = (ImageButton) findViewById(R.id.btnCommonAlarm);
+        btnCall = (ImageButton) findViewById(R.id.btnCommonCall);
+        btnAccount = (ImageButton) findViewById(R.id.btnCommonAccount);
 
         btnHome = (ImageButton) findViewById(R.id.btnCommonHome);
         btnCamera = (ImageButton) findViewById(R.id.btnCommonCamera);
@@ -49,11 +54,20 @@ public class FirstActivity extends Activity implements SensorEventListener, View
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
+            case R.id.btnCommonAlarm:
+                startActivity(new Intent(FirstActivity.this, alarm.class));
+                break;
+            case R.id.btnCommonCall:
+                startActivity(new Intent(FirstActivity.this, call.class));
+                break;
+            case R.id.btnCommonAccount:
+                startActivity(new Intent(FirstActivity.this, myaccount.class));
+                break;
             case R.id.btnCommonCamera:
-                startActivity(new Intent(FirstActivity.this, camera.class));
+                startActivity(new Intent(FirstActivity.this, CameraActivity.class));
                 break;
             case R.id.btnCommonTalk :
-                startActivity(new Intent(FirstActivity.this, talk.class));
+                startActivity(new Intent(FirstActivity.this, ChattingActivity.class));
                 break;
             case  R.id.btnCommonRecord :
                 startActivity(new Intent(FirstActivity.this, Record.class));

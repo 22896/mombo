@@ -6,99 +6,84 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mombo.Main.ChattingActivity;
 import com.example.mombo.Main.FirstActivity;
+import com.example.mombo.PreferenceUtil;
 import com.example.mombo.R;
-import com.example.mombo.UserData;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 
 public class Join_mom extends AppCompatActivity {
 
 
+    String tempkey;
+    private Button start_btn;
+    EditText name_edit;
+    RadioGroup radiogender;
+    RadioButton radiomale, radiofemale;
+    FirebaseDatabase mDatabase;
+    private DatabaseReference userRef;
+    private StorageReference storageRef;
+    String gender;
+    String name;
+    EditText steps;
+    EditText hosnum;
+    int SelectedId;
 
-    private EditText input_email,input_pswd,input_nickname,input_phone,input_famphone,input_hnumber,input_steps;
-    private Button input_signup;
 
-    DatabaseReference database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        input_email= findViewById(R.id.input_email);
-        input_pswd= findViewById(R.id.input_pswd);
-        input_nickname= findViewById(R.id.input_nickname);
-        input_phone= findViewById(R.id.input_phone);
-        input_famphone= findViewById(R.id.famNum_edit);
-        input_hnumber= findViewById(R.id.hosNum_edit);
-        input_steps =findViewById((R.id.steps));
+        mDatabase = FirebaseDatabase.getInstance();
+        userRef = mDatabase.getReference("UserData");
+        String myNum = PreferenceUtil.getStringValue(this, "myNum");
+        storageRef = FirebaseStorage.getInstance().getReference();
 
-        input_signup = findViewById(R.id.input_signup);
+        getIntentFromPhoneConnectActivity();
 
-        database = FirebaseDatabase.getInstance().getReference().child("User Data");
-
-        input_signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userId,userEmail,userPassword,userNickname,userMyNumber,userFamNumber,userHosNumber,userSteps;
-
-                userId = database.push().getKey();
-                userEmail = input_email.getText().toString();
-                userPassword = input_pswd.getText().toString();
-                userNickname = input_nickname.getText().toString();
-                userMyNumber = input_phone.getText().toString();
-                userFamNumber = input_famphone.getText().toString();
-                userHosNumber = input_hnumber.getText().toString();
-                userSteps = input_steps.getText().toString();
-
-                if (userEmail.equals("")) {
-                    Toast.makeText(Join_mom.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userPassword.equals("")) {
-                    Toast.makeText(Join_mom.this, "비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userNickname.equals("")) {
-                    Toast.makeText(Join_mom.this, "닉네임을 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userMyNumber.equals("")) {
-                    Toast.makeText(Join_mom.this, "자신의 전화번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userFamNumber.equals("")) {
-                    Toast.makeText(Join_mom.this, "가족의 전화번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userHosNumber.equals("")) {
-                    Toast.makeText(Join_mom.this, "병원의 전화번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userSteps.equals("")) {
-                    Toast.makeText(Join_mom.this, "걸음수를 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userPassword.length() < 6) {
-                    Toast.makeText(Join_mom.this, "비밀번호를 6자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userMyNumber.length() < 11) {
-                    Toast.makeText(Join_mom.this, "자신의 전화번호를 11자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userFamNumber.length() < 11) {
-                    Toast.makeText(Join_mom.this, "가족의 전화번호를 11자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else if (userHosNumber.length() < 11) {
-                    Toast.makeText(Join_mom.this, "병원의 전화번호를 11자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
-                }
-                else {
-                    UserData userData = new UserData(userId,userEmail,userPassword,userNickname,userMyNumber,userFamNumber,userHosNumber,userSteps);
-                    database.child(userId).setValue(userData);
-                    Toast.makeText(Join_mom.this, "회원가입에 성공하셨습니다.", Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(Join_mom.this, FirstActivity.class);
-                        startActivity(i);
-                        finish();
-                }
-            }
-        });
+        start_btn = findViewById(R.id.start_btn);
+        radiogender = (RadioGroup) findViewById(R.id.radiogender);
+        name_edit = (EditText) findViewById(R.id.name_edit);
+        hosnum = (EditText) findViewById(R.id.hosnum);
+        steps = (EditText) findViewById(R.id.steps);
     }
+
+    public void movetohome(View view) {
+        addDatabase();
+        Intent intentForHome = new Intent(Join_mom.this, FirstActivity.class);
+        intentForHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intentForHome);
+        Intent intentForChat = new Intent(Join_mom.this, ChattingActivity.class);
+        intentForChat.putExtra("tempkey", tempkey);
+        startActivity(intentForChat);
+    }
+
+    public void addDatabase() {
+        SelectedId = radiogender.getCheckedRadioButtonId();
+        gender = SelectedId == R.id.radiomale ? "male" : "female";
+        name = name_edit.toString().trim();
+        userRef.child(tempkey).child("name").setValue(name);
+        userRef.child(tempkey).child("hosnum").setValue(hosnum);
+        userRef.child(tempkey).child("steps").setValue(steps);
+        userRef.child(tempkey).child("gender").setValue(gender);
+        PreferenceUtil.setValue(Join_mom.this, "autoSignin", "true");
+    }
+
+    public void getIntentFromPhoneConnectActivity() {
+        Intent intent = getIntent();
+        tempkey = getIntent().getExtras().getString("tempkey2");
+    }
+
 }
 
 

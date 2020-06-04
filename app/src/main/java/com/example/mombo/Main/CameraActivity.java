@@ -6,12 +6,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mombo.R;
 
-public class FirstActivity2 extends AppCompatActivity {
+public class CameraActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first2);
+        setContentView(R.layout.activity_camera);
+
+
 
     }
+
+
+
+
+
+
+
+
+
 }

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.mombo.Main.FirstActivity;
 import com.example.mombo.R;
 
 public class Record extends AppCompatActivity {

@@ -13,10 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".AcceptActivity"></activity>
+        <activity android:name=".SignUp.PhoneConnectActivity" />
+        <activity android:name=".SignUp.SignUp" />
         <activity android:name=".Main.alarm" />
         <activity android:name=".Main.call" />
-        <activity android:name=".Main.camera" />
+        <activity android:name=".Main.CameraActivity" />
         <activity android:name=".Main.FirstActivity" />
         <activity android:name=".Main.FirstActivity2" />
         <activity android:name=".Main.LoginActivity">
@@ -27,17 +29,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main.Record" />
-        <activity android:name=".Main.talk" />
-
+        <activity android:name=".Main.ChattingActivity" />
         <activity android:name=".Myaccount.myaccount" />
         <activity android:name=".Myaccount.PasswordResetActivity" />
         <activity android:name=".Myaccount.ProfileResetActivity" />
-
         <activity android:name=".SignUp.check" />
         <activity android:name=".SignUp.ChoiceActivity" />
         <activity android:name=".SignUp.Join_fam" />
         <activity android:name=".SignUp.Join_mom" />
-
         <activity android:name=".SelfDiagnosis.selfdiagnosis11" />
         <activity android:name=".SelfDiagnosis.selfdiagnosis10" />
         <activity android:name=".SelfDiagnosis.selfdiagnosis9" />
@@ -50,13 +49,13 @@
         <activity android:name=".SelfDiagnosis.selfdiagnosis2" />
         <activity android:name=".SelfDiagnosis.selfdiagnosis" />
 
-        <service android:name=".MyFirebaseMessagingService"
+        <service
+            android:name=".MyFirebaseMessagingService"
             android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
@@ -67,11 +66,6 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
-
-
     </application>
-
-
-
 
 </manifest>

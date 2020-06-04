@@ -1,11 +1,11 @@
 package com.example.mombo.Main;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mombo.R;
 
@@ -26,6 +26,7 @@ ImageButton back_btn;
             public void onClick(View w) {
                 Intent intent = new Intent(getApplicationContext(), FirstActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

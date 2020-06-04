@@ -15,16 +15,15 @@ public class call extends AppCompatActivity implements View.OnClickListener {
 
     private Button mCall, mDialog;
     private EditText mEditNumber;
-    private String mNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call);
 
-        mCall = (Button) findViewById(R.id.BtnCall);
-        mDialog = (Button) findViewById((R.id.BtnDialog));
-        mEditNumber = (EditText) findViewById((R.id.edtNum));
+        mCall = findViewById(R.id.BtnCall);
+        mDialog =  findViewById((R.id.BtnDialog));
+        mEditNumber = findViewById((R.id.edtNum));
 
         mCall.setOnClickListener(this);
         mDialog.setOnClickListener(this);
@@ -32,7 +31,7 @@ public class call extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        mNum = mEditNumber.getText().toString();
+        String mNum = mEditNumber.getText().toString();
         String tel = "tel:" + mNum;
         switch (v.getId()) {
             case R.id.BtnCall:
