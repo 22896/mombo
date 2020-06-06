@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Main.alarm" />
-        <activity android:name=".Main.call" />
-        <activity android:name=".Main.camera" />
+        <activity android:name=".Main.AlarmActivity" />
+        <activity android:name=".Main.CallActivity" />
+        <activity android:name=".Main.CameraActivity" />
         <activity android:name=".Main.FirstActivity" />
         <activity android:name=".Main.FirstActivity2" />
         <activity android:name=".Main.LoginActivity">
@@ -26,34 +26,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main.Record" />
-        <activity android:name=".Main.talk" />
+        <activity android:name=".Main.CheckActivity" />
+        <activity android:name=".Main.ChattingActivity" />
 
-        <activity android:name=".Myaccount.myaccount" />
+        <activity android:name=".Myaccount.MyaccountActivity" />
         <activity android:name=".Myaccount.PasswordResetActivity" />
         <activity android:name=".Myaccount.ProfileResetActivity" />
 
-        <activity android:name=".SignUp.check" />
         <activity android:name=".SignUp.ChoiceActivity" />
-        <activity android:name=".SignUp.Join_fam" />
-        <activity android:name=".SignUp.Join_mom" />
+        <activity android:name=".SignUp.JoinFamActivity" />
+        <activity android:name=".SignUp.JoinMomActivity" />
 
-        <activity android:name=".SelfDiagnosis.selfdiagnosis11" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis10" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis9" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis8" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis6" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis7" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis5" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis4" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis3" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis2" />
-        <activity android:name=".SelfDiagnosis.selfdiagnosis" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity10" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity9" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity8" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity6" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity7" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity5" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity4" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity3" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity2" />
+        <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity1" />
+
+        <activity android:name=".SignUp.ChoiceActivity" />
+        <activity android:name=".SignUp.JoinFamActivity" />
+        <activity android:name=".SignUp.JoinMomActivity" />
+
 
         <service android:name=".MyFirebaseMessagingService"
             android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-
+            android:permission="com.google.android.c2dm.permission.SEND"
+            >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>

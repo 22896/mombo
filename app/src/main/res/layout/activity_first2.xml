@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:layout_weight="1"
-                android:text="자가진단"
+                android:text="관심도 조사"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -131,30 +131,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="관심도 조사 여부"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <ProgressBar
-                android:id="@+id/progressBar3"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:indeterminate="false"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton9"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
-        </LinearLayout>
+            android:orientation="vertical"/>
     </LinearLayout>
 
 

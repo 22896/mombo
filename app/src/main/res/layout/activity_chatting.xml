@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.mombo.Main.ChattingActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChattingActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?actionBarSize" />
+
+
+    <LinearLayout
+        android:id="@+id/text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/editTextPutMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:layout_weight="1"
+            android:hint="@string/type_a_text"
+            android:inputType="textMultiLine"
+            android:layout_marginRight="20dp"
+            android:maxLines="5"
+            android:textSize="20sp" />
+
+        <!--    android:onClick="sendMessage"-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/buttonSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:text="@string/send"
+            app:backgroundTint="#364CC5"
+            app:fabSize="auto"
+            android:layout_margin="15dp"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolbarChattingActivity"
+        android:id="@+id/recyclerViewChatting"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/text_tv">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

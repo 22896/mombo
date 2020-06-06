@@ -76,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         email = input_email.getText().toString().trim();
         password = input_pswd.getText().toString().trim();
 
+
         if (email.equals("")) {
             Toast.makeText(LoginActivity.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
         } else if (password.equals("")) {

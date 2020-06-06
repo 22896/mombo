@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Main.camera">
+    tools:context="com.example.mombo.Main.CameraActivity">
     <!--    android:visibility="visible"-->
 
 
     <WebView
         android:id="@+id/cctvweb"
-        android:layout_width="362dp"
-        android:layout_height="547dp"
+        android:layout_width="365dp"
+        android:layout_height="621dp"
         android:layout_marginLeft="25dp" />
 
 

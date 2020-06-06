@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Myaccount.myaccount">
+    tools:context="com.example.mombo.Myaccount.MyaccountActivity">
 
 
     <LinearLayout
@@ -33,8 +33,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
             android:background="@android:color/transparent"
-            android:layout_gravity="right"
-            android:src="@drawable/ic_baseline_chevron_right_24" />
+            android:layout_gravity="right" />
 
 
     </LinearLayout>
@@ -47,22 +46,6 @@
         android:layout_marginBottom="20dp"
         android:background="@color/gray"
         android:text="개인정보 수정" />
-
-    <Button
-        android:id="@+id/modify2"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/gray"
-        android:text="병원 및 상담 전화번호 변경" />
-
-    <Button
-        android:id="@+id/modify3"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/gray"
-        android:text="걸음수 변경" />
 
     <Button
         android:id="@+id/btnDelete"
@@ -85,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/gray"
-        android:text="로그아웃"/>
+        android:text="로그아웃" />
 
 
 </LinearLayout>

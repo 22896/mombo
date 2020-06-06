@@ -50,13 +50,13 @@ public class FirstActivity extends Activity implements SensorEventListener, View
         int id = view.getId();
         switch (id) {
             case R.id.btnCommonCamera:
-                startActivity(new Intent(FirstActivity.this, camera.class));
+                startActivity(new Intent(FirstActivity.this, CameraActivity.class));
                 break;
             case R.id.btnCommonTalk :
-                startActivity(new Intent(FirstActivity.this, talk.class));
+                startActivity(new Intent(FirstActivity.this, ChattingActivity.class));
                 break;
             case  R.id.btnCommonRecord :
-                startActivity(new Intent(FirstActivity.this, Record.class));
+                startActivity(new Intent(FirstActivity.this, CheckActivity.class));
         }
 
     }

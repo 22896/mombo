@@ -21,7 +21,7 @@ public class ChoiceActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Join_mom.class);
+                Intent intent = new Intent(getApplicationContext(), JoinMomActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +31,7 @@ public class ChoiceActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Join_fam.class);
+                Intent intent = new Intent(getApplicationContext(), JoinFamActivity.class);
                 startActivity(intent);
             }
         });

@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mombo.R;
-import com.example.mombo.SelfDiagnosis.selfdiagnosis;
+import com.example.mombo.Mom_SelfDiagnosis.MomSelfdiagnosisActivity1;
 
 public class FirstActivity2 extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class FirstActivity2 extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), camera.class);
+                Intent intent = new Intent(getApplicationContext(), CameraActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class FirstActivity2 extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), selfdiagnosis.class);
+                Intent intent = new Intent(getApplicationContext(), MomSelfdiagnosisActivity1.class);
                 startActivity(intent);
             }
         });
@@ -52,7 +52,7 @@ public class FirstActivity2 extends AppCompatActivity {
 
             @Override
             public void onClick(View w) {
-                Intent intent = new Intent(getApplicationContext(), Record.class);
+                Intent intent = new Intent(getApplicationContext(), CheckActivity.class);
                 startActivity(intent);
             }
         });

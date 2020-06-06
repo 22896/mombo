@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/saaaa"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Main.CheckActivity">
+    tools:context="com.example.mombo.Mom_SelfDiagnosis.MomSelfdiagnosisActivity1">
 
 
     <!--상단바-->
@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ImageButton
-            android:id="@+id/alarm"
+            android:id="@+id/imageButton6"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@android:color/transparent"
@@ -30,7 +30,7 @@
             android:src="@drawable/noun_bell_3319638" />
 
         <ImageButton
-            android:id="@+id/call"
+            android:id="@+id/imageButton7"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
@@ -44,54 +44,101 @@
             android:src="@drawable/noun_phone_1778832" />
 
         <ImageButton
-            android:id="@+id/myaccount"
+            android:id="@+id/imageButton8"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@android:color/transparent"
             android:padding="0dp"
             android:scaleType="fitCenter"
             android:src="@drawable/noun_user_2699583" />
-
     </LinearLayout>
 
-    <!-- 가운데-->
+    <!--    진단부분-->
     <LinearLayout
-        android:layout_below="@+id/rv_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_below="@+id/rv_1"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
         android:orientation="vertical">
 
-        <TableLayout
-            android:id="@+id/tableLayout"
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:text="관심도 조사"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="270dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="30dp"
+            android:text="7. 산모를 이해할 수 있다."
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <!--대답 체크 부분-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="528dp"
-            android:background="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.281">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TableRow
+            <CheckBox
+                android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="대부분 그렇다."
+                android:textSize="18sp" />
 
-            <TableRow
+            <CheckBox
+                android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="가끔 그렇다."
+                android:textSize="18sp" />
 
-            <TableRow
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="드물다."
+                android:textSize="18sp" />
 
-            <TableRow
+            <CheckBox
+                android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout>
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="전혀 아니다."
+                android:textSize="18sp" />
+        </LinearLayout>
 
+        <!--페이지 이전 다음-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="이전" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="다음" />
+        </LinearLayout>
     </LinearLayout>
 
 
@@ -151,6 +198,5 @@
             android:padding="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/noun_menu_2091765" />
-
     </LinearLayout>
 </RelativeLayout>
