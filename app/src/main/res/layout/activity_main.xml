@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/dfs"
     android:orientation="vertical"
-    tools:context="com.example.mombo.Main.LoginActivity">
+    tools:context="com.example.mombo.Main.MainActivity">
 
     <LinearLayout
         android:id="@+id/tv_1"

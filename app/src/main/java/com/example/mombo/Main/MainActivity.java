@@ -27,7 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 
-public class LoginActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private ImageButton login_btn;
     private EditText input_email, input_pswd;
@@ -78,21 +78,21 @@ public class LoginActivity extends AppCompatActivity {
 
 
         if (email.equals("")) {
-            Toast.makeText(LoginActivity.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
         } else if (password.equals("")) {
-            Toast.makeText(LoginActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
         } else if (password.length() < 6) {
-            Toast.makeText(LoginActivity.this, "비밀번호는 6자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "비밀번호는 6자 이상 입력해주세요.", Toast.LENGTH_LONG).show();
         } else {
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Intent i = new Intent(LoginActivity.this, FirstActivity.class);
+                        Intent i = new Intent(MainActivity.this, FirstActivity.class);
                         startActivity(i);
                         finish();
                     } else {
-                        Toast.makeText(LoginActivity.this, "문제가 발생하였습니다.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "문제가 발생하였습니다.", Toast.LENGTH_LONG).show();
 
                     }
 

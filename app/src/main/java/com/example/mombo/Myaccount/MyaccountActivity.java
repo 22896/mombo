@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mombo.Main.FirstActivity;
-import com.example.mombo.Main.LoginActivity;
+import com.example.mombo.Main.MainActivity;
 import com.example.mombo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -93,7 +93,7 @@ public class MyaccountActivity extends AppCompatActivity {
     };
 
     private void startFirstActivity(){
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.mombo.Main.LoginActivity;
+import com.example.mombo.Main.MainActivity;
 import com.example.mombo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -97,7 +97,7 @@ public class JoinFamActivity extends AppCompatActivity {
 
                                         Toast.makeText(JoinFamActivity.this, "등록 성공!", Toast.LENGTH_SHORT).show();
 
-                                        Intent intent = new Intent(JoinFamActivity.this, LoginActivity.class);
+                                        Intent intent = new Intent(JoinFamActivity.this, MainActivity.class);
                                         startActivity(intent);
 
                                     } else {
