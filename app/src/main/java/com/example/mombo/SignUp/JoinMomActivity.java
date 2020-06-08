@@ -26,6 +26,10 @@ public class JoinMomActivity extends AppCompatActivity {
     private EditText input_email,input_pswd,input_nickname,input_phone,input_famphone,input_hnumber,input_steps;
     private Button input_signup;
 
+
+
+
+
     DatabaseReference database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,7 @@ public class JoinMomActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance().getReference().child("User Data");
 
+
         input_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +64,8 @@ public class JoinMomActivity extends AppCompatActivity {
                 userSteps = input_steps.getText().toString();
 
 
-                if (userEmail.equals("")) {
+
+               if (userEmail.equals("")) {
                     Toast.makeText(JoinMomActivity.this, "이메일을 입력해주세요.", Toast.LENGTH_LONG).show();
                 }
                 else if (userPassword.equals("")) {
@@ -105,6 +111,7 @@ public class JoinMomActivity extends AppCompatActivity {
                 }
             }
         });
+
 
 
 

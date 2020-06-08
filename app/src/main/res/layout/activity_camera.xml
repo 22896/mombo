@@ -13,9 +13,27 @@
 
     <WebView
         android:id="@+id/cctvweb"
-        android:layout_width="365dp"
-        android:layout_height="621dp"
+        android:layout_width="362dp"
+        android:layout_height="616dp"
         android:layout_marginLeft="25dp" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottom_menu"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </LinearLayout>
