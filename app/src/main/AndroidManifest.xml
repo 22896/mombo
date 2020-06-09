@@ -49,9 +49,6 @@
         <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity2" />
         <activity android:name=".Mom_SelfDiagnosis.MomSelfdiagnosisActivity1" />
 
-        <activity android:name=".SignUp.ChoiceActivity" />
-        <activity android:name=".SignUp.JoinFamActivity" />
-        <activity android:name=".SignUp.JoinMomActivity" />
 
 
         <service android:name=".MyFirebaseMessagingService"
